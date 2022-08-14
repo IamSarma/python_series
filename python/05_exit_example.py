@@ -8,4 +8,3 @@ while True:
         sys.exit()
 
     print("You typed " + response + ".")
-

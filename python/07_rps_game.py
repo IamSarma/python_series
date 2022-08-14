@@ -1,5 +1,6 @@
 # This is a Rock, Paper, Scissors game.
-import random, sys
+import random
+import sys
 
 # These variables keep track of wins, losses and ties.
 wins, losses, ties = 0, 0, 0

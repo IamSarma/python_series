@@ -1,4 +1,5 @@
-import time, sys
+import time
+import sys
 
 indent = 0
 indent_increasing = True
@@ -19,4 +20,3 @@ try:
                 indent_increasing = True
 except KeyboardInterrupt:
     sys.exit()
-
