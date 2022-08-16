@@ -58,12 +58,12 @@ while True:
 
             # Set cell based on Conway's Game of Life rules
             if current_cells[x][y] == "■" and (num_neighbors == 2 or num_neighbors == 3):
-                # Living cells with 2 or 3 neighbors stay alive
+                # Living cells with 2 or 3 neighbors stays alive
                 next_cells[x][y] = "■"
             elif current_cells[x][y] == " " and num_neighbors == 3:
                 # Dead cells with 3 neighbors become alive
                 next_cells[x][y] = "■"
             else:
-                # Everythin else dies or stay dead
+                # Everything else dies or stay dead
                 next_cells[x][y] = " "
     time.sleep(1)
