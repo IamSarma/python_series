@@ -30,9 +30,33 @@ def isValidChessBoard(user_input):
         pieces_count[value] += 1
 
     if pieces_count['white_pieces_count'] > 16:
-        return False
-    if pieces_count['black_pieces_count'] > 16:
-        return False
+        is_valid = False
+    elif pieces_count['black_pieces_count'] > 16:
+        is_valid = False
+    elif "wpawn" in pieces_count and pieces_count["wpawn"] > 8:
+        is_valid = False
+    elif "bpawn" in pieces_count and pieces_count["bpawn"] > 8:
+        is_valid = False
+    elif "wking" in pieces_count and pieces_count["wking"] > 1:
+        is_valid = False
+    elif "bking" in pieces_count and pieces_count["bking"] > 1:
+        is_valid = False
+    elif "wqueen" in pieces_count and pieces_count["wqueen"] > 1:
+        is_valid = False
+    elif "bqueen" in pieces_count and pieces_count["bqueen"] > 1:
+        is_valid = False
+    elif "wbishop" in pieces_count and pieces_count["wbishop"] > 2:
+        is_valid = False
+    elif "bbishop" in pieces_count and pieces_count["bbishop"] > 2:
+        is_valid = False
+    elif "wrook" in pieces_count and pieces_count["wrook"] > 2:
+        is_valid = False
+    elif "brook" in pieces_count and pieces_count["brook"] > 2:
+        is_valid = False
+    elif "wknight" in pieces_count and pieces_count["wknight"] > 2:
+        is_valid = False
+    elif "bknight" in pieces_count and pieces_count["bknight"] > 2:
+        is_valid = False
 
     return is_valid
 
@@ -65,19 +89,19 @@ user_board = {
     '2g': 'bbishop',
     '5h': 'bqueen',
     '3e': 'wking',
-    '1a': 'bqueen',
-    '1b': 'bqueen',
-    '1c': 'bqueen',
-    '1d': 'bqueen',
-    '1e': 'bqueen',
-    '1f': 'bqueen',
-    '1g': 'bqueen',
-    '2a': 'bqueen',
-    '2b': 'bqueen',
-    '2c': 'bqueen',
-    '2d': 'bqueen',
-    '3a': 'bqueen',
-    '3b': 'bqueen',
+    '1a': 'wpawn',
+    '1b': 'wpawn',
+    '1c': 'wpawn',
+    '1d': 'wpawn',
+    '1e': 'wpawn',
+    '1f': 'wpawn',
+    '1g': 'wpawn',
+    '2a': 'wpawn',
+    '2b': 'wknight',
+    # '2c': 'bqueen',
+    # '2d': 'bqueen',
+    # '3a': 'bqueen',
+    # '3b': 'bqueen',
     # '3c': 'bqueen',
 }
 
