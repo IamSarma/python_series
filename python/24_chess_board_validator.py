@@ -16,17 +16,23 @@ def isValidChessBoard(user_input):
             return False
 
     # Check for total pieces count and pieces limit
-    white_pieces_count, black_pieces_count = 0, 0
+    pieces_count = {
+        "white_pieces_count": 0,
+        "black_pieces_count": 0,
+    }
 
     for value in user_input.values():
         if value in white_pieces:
-            white_pieces_count += 1
-            if white_pieces_count > 16:
-                return False
-        elif value in black_pieces:
-            black_pieces_count += 1
-            if black_pieces_count > 16:
-                return False
+            pieces_count["white_pieces_count"] += 1
+        if value in black_pieces:
+            pieces_count["black_pieces_count"] += 1
+        pieces_count.setdefault(value, 0)
+        pieces_count[value] += 1
+
+    if pieces_count['white_pieces_count'] > 16:
+        return False
+    if pieces_count['black_pieces_count'] > 16:
+        return False
 
     return is_valid
 
