@@ -48,3 +48,9 @@ for word in message.split():
         word = word.upper()
     if was_title:
         word = word.title()
+
+    # Add the non-letters to the start or end of the word
+    pig_latin.append(prefix_consonants + word + suffix_non_letters)
+
+# Join all the words back together into a string and print the result
+print(" ".join(pig_latin))
