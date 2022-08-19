@@ -23,3 +23,10 @@ for word in message.split():
     while not word[-1].isalpha():
         suffix_non_letters += word[-1]
         word = word[:-1]
+
+    # Remember if the word was in uppercase or title case
+    was_upper = word.isupper()
+    was_title = word.istitle()
+
+    # Convert word to lower case and use for the rest of the program
+    word = word.lower()
