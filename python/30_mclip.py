@@ -1,6 +1,7 @@
 #! python3
 # mclip.py - A multi-clipboard program.
 import sys
+import pyperclip
 
 
 TEXT = {
@@ -14,3 +15,9 @@ if len(sys.argv) < 2:
     sys.exit()
 
 keyphrase = sys.argv[1]
+
+if keyphrase in TEXT:
+    pyperclip.copy(TEXT[keyphrase])
+    print(f"Text for {keyphrase} copied to clipboard.")
+else:
+    print(f"There is no text for {keyphrase}.")
