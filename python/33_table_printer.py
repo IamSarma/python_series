@@ -7,6 +7,14 @@ def printTable(table_data):
             if len(item) > max_len:
                 max_len = len(item)
 
+    # Displaying data in tabular format
+    item_index = 0
+    while item_index <= len(table_data):
+        for data in table_data:
+            print(data[item_index].rjust(max_len), end="")
+        print()
+        item_index += 1
+
 
 table_data = [
     ["apples", "oranges", "cherries", "banana"],
