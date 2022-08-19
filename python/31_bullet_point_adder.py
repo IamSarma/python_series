@@ -6,5 +6,8 @@ import pyperclip
 text = pyperclip.paste()
 
 # Separate lines and add stars.
+lines = text.split("\n")
+for i in range(len(lines)):
+    lines[i] += "* "
 
 pyperclip.copy(text)
