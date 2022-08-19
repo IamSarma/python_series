@@ -36,3 +36,15 @@ for word in message.split():
     while len(word) > 0 and not word[0] in VOWELS:
         prefix_consonants += word[0]
         word = word[1:]
+
+    # Add the Pig Latin to the end of the current word
+    if prefix_consonants != "":
+        word += prefix_consonants + "ay"
+    else:
+        word += "yay"
+
+    # Apply the previous case of the word
+    if was_upper:
+        word = word.upper()
+    if was_title:
+        word = word.title()
