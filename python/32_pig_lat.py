@@ -30,3 +30,9 @@ for word in message.split():
 
     # Convert word to lower case and use for the rest of the program
     word = word.lower()
+
+    # Separate the consonants at the start of the current word
+    prefix_consonants = ""
+    while len(word) > 0 and not word[0] in VOWELS:
+        prefix_consonants += word[0]
+        word = word[1:]
