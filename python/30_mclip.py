@@ -1,5 +1,11 @@
 #! python3
 # mclip.py - A multi-clipboard program.
+"""
+Add the below lines in a text file, save it as 'mclip.bat' and save it under C:\Windows folder
+Open run windows by pressing 'windows + R' and enter 'mclip keyphrase' to execute
+@py.exe C:\path_to_file\mclip.py %*
+@pause
+"""
 import sys
 import pyperclip
 
