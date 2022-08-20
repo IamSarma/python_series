@@ -27,7 +27,16 @@ print(match_object_4.group())
 
 
 # Matching one of several patterns with Pipe and paranthesis
-bat_regex = re.compile(r"Bat(man|mobile|copter|bat)")
-match_object_5 = bat_regex.search("Batmobile lost a wheel")
+bat_regex_1 = re.compile(r"Bat(man|mobile|copter|bat)")
+match_object_5 = bat_regex_1.search("Batmobile lost a wheel")
 print(match_object_5.group())
 print(match_object_5.group(1))
+
+
+# Optional pattern matching with the Question mark
+bat_regex_2 = re.compile(r"Bat(wo)?man")
+match_object_6 = bat_regex_2.search("The Adventures of Batman")
+print(match_object_6.group())
+
+match_object_7 = bat_regex_2.search("The Adventures of Batwoman")
+print(match_object_7.group())
