@@ -100,3 +100,9 @@ print(phonenum_regex_4.findall(input_string))
 xmas_regex = re.compile(r"\d+\s+\w+")
 xmas_message = "12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 partridge"
 print(xmas_regex.findall(xmas_message))
+
+
+# Making your own character class(es)
+vowel_regex = re.compile(r"[aeiouAEIOU]")
+vowel_string = "Robocop eats baby food. BABY FOOD."
+print(vowel_regex.findall(vowel_string))
