@@ -187,3 +187,9 @@ robocop_string_3 = "Why the heck are we taking about robocop so much 🤖"
 print(robocop_regex.search(robocop_string_1).group())
 print(robocop_regex.search(robocop_string_2).group())
 print(robocop_regex.search(robocop_string_3).group())
+
+
+# Substitution strings with the sub() method
+names_regex = re.compile(r"Agent \w+")
+secret_message = "Agent Alice gave the secret documents to Agent Bob"
+print(names_regex.sub("CENSORED", secret_message))
