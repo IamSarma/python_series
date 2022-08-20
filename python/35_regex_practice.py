@@ -103,6 +103,11 @@ print(xmas_regex.findall(xmas_message))
 
 
 # Making your own character class(es)
-vowel_regex = re.compile(r"[aeiouAEIOU]")
+vowel_regex_1 = re.compile(r"[aeiouAEIOU]")
 vowel_string = "Robocop eats baby food. BABY FOOD."
-print(vowel_regex.findall(vowel_string))
+print(vowel_regex_1.findall(vowel_string))
+
+
+# Making negative character class(es)
+vowel_regex_2 = re.compile(r"[^aeiouAEIOU]")
+print(vowel_regex_2.findall(vowel_string))
