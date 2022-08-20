@@ -120,3 +120,11 @@ print(match_object_19.group())
 
 match_object_20 = begins_with_hello.search("He said hello.")
 print(match_object_20 == None)
+
+# Use Dollar sign to apply ending with pattern
+ends_with_number = re.compile(r"\d$")
+match_object_21 = ends_with_number.search("My lucky number is 3")
+print(match_object_21.group())
+
+match_object_22 = ends_with_number.search("My lucky number is three")
+print(match_object_22 == None)
