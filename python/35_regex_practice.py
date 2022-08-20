@@ -64,3 +64,12 @@ print(match_object_12.group())
 
 match_object_13 = bat_regex_4.search("The Adventures of Batman")
 print(match_object_13 == None)
+
+
+# Matching specific repititions with braces
+ha_regex = re.compile(r"(Ha){3}")
+match_object_14 = ha_regex.search("HaHaHa")
+print(match_object_14.group())
+
+match_object_15 = ha_regex.search("Ha")
+print(match_object_15 == None)
