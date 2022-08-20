@@ -147,3 +147,11 @@ print(match_object_25 == None)
 at_regex = re.compile(r".at")
 at_string = "The cat in the hat sat on the flat mat"
 print(at_regex.findall(at_string))
+
+
+# Matching everything with .*
+name_regex = re.compile(r"First Name: (.*) Last Name: (.*)")
+name_string = "First Name: Sarma Last Name: Akondi V N M"
+match_object_26 = name_regex.search(name_string)
+print(match_object_26.group(1))
+print(match_object_26.group(2))
