@@ -19,3 +19,11 @@ def isPhoneNumber(text):
             return False
 
     return True
+
+
+message = "Call me at 426-444-2011 tomorrow. 426-444-1025 is my office"
+
+for i in range(len(message)):
+    chunk_of_text = message[i:i+12]
+    if isPhoneNumber(chunk_of_text):
+        print(f"Phone number found: {chunk_of_text}")
