@@ -94,3 +94,9 @@ print(phonenum_regex_3.findall(input_string))
 
 phonenum_regex_4 = re.compile(r"(\d\d\d)-(\d\d\d)-(\d\d\d\d)")
 print(phonenum_regex_4.findall(input_string))
+
+
+# The character class example
+xmas_regex = re.compile(r"\d+\s+\w+")
+xmas_message = "12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 partridge"
+print(xmas_regex.findall(xmas_message))
