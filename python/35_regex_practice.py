@@ -111,3 +111,12 @@ print(vowel_regex_1.findall(vowel_string))
 # Making negative character class(es)
 vowel_regex_2 = re.compile(r"[^aeiouAEIOU]")
 print(vowel_regex_2.findall(vowel_string))
+
+
+# Use Caret sign to apply starting with pattern
+begins_with_hello = re.compile(r"^Hello")
+match_object_19 = begins_with_hello.search("Hello, world!")
+print(match_object_19.group())
+
+match_object_20 = begins_with_hello.search("He said hello.")
+print(match_object_20 == None)
