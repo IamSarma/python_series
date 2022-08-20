@@ -166,3 +166,14 @@ print(match_object_27.group())
 non_greedy_regex_2 = re.compile(r"<.*?>")
 match_object_28 = non_greedy_regex_2.search(search_string)
 print(match_object_28.group())
+
+
+# Matching new lines with .*
+no_newline_regex = re.compile(r".*")
+newline_string = "Serve the public trust.\nProtect the innocent.\nUphold the law."
+match_object_29 = no_newline_regex.search(newline_string)
+print(match_object_29.group())
+
+newline_regex = re.compile(r".*", re.DOTALL)
+match_object_30 = newline_regex.search(newline_string)
+print(match_object_30.group())
