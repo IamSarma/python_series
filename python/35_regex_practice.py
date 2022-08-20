@@ -83,3 +83,14 @@ print(match_object_16.group())
 non_greedy_regex = re.compile(r"(Ha){3,5}?")
 match_object_17 = non_greedy_regex.search("HaHaHaHaHa")
 print(match_object_17.group())
+
+
+# findall() method
+phonenum_regex_3 = re.compile(r"\d\d\d-\d\d\d-\d\d\d\d")
+input_string = "Cell: 415-555-9999 Work: 212-555-0000"
+match_object_18 = phonenum_regex_3.search(input_string)
+print(match_object_18.group())
+print(phonenum_regex_3.findall(input_string))
+
+phonenum_regex_4 = re.compile(r"(\d\d\d)-(\d\d\d)-(\d\d\d\d)")
+print(phonenum_regex_4.findall(input_string))
