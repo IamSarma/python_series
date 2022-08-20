@@ -42,7 +42,7 @@ match_object_7 = bat_regex_2.search("The Adventures of Batwoman")
 print(match_object_7.group())
 
 
-# Matching zero or more patterns with Star *
+# Matching zero or more pattern occurrences with Star *
 bat_regex_3 = re.compile(r"Bat(wo)*man")
 match_object_8 = bat_regex_3.search("The Adventures of Batman")
 print(match_object_8.group())
@@ -52,3 +52,15 @@ print(match_object_9.group())
 
 match_object_10 = bat_regex_3.search("The Adventures of Batwowowowowoman")
 print(match_object_10.group())
+
+
+# Matching one or more pattern occurences with Plus +
+bat_regex_4 = re.compile(r"Bat(wo)+man")
+match_object_11 = bat_regex_4.search("The Adventures of Batwoman")
+print(match_object_11.group())
+
+match_object_12 = bat_regex_4.search("The Adventures of Batwowowoman")
+print(match_object_12.group())
+
+match_object_13 = bat_regex_4.search("The Adventures of Batman")
+print(match_object_13 == None)
