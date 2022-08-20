@@ -24,3 +24,10 @@ print(match_object_3.group())
 
 match_object_4 = hero_regex.search("Tina Fey and Batman")
 print(match_object_4.group())
+
+
+# Matching one of several patterns with Pipe and paranthesis
+bat_regex = re.compile(r"Bat(man|mobile|copter|bat)")
+match_object_5 = bat_regex.search("Batmobile lost a wheel")
+print(match_object_5.group())
+print(match_object_5.group(1))
