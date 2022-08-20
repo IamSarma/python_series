@@ -155,3 +155,14 @@ name_string = "First Name: Sarma Last Name: Akondi V N M"
 match_object_26 = name_regex.search(name_string)
 print(match_object_26.group(1))
 print(match_object_26.group(2))
+
+
+# Greedy and Non-greedy using .*
+greedy_regex_2 = re.compile(f"<.*>")
+search_string = "<To serve man> for dinner.>"
+match_object_27 = greedy_regex_2.search(search_string)
+print(match_object_27.group())
+
+non_greedy_regex_2 = re.compile(r"<.*?>")
+match_object_28 = non_greedy_regex_2.search(search_string)
+print(match_object_28.group())
