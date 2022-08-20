@@ -193,3 +193,9 @@ print(robocop_regex.search(robocop_string_3).group())
 names_regex = re.compile(r"Agent \w+")
 secret_message = "Agent Alice gave the secret documents to Agent Bob"
 print(names_regex.sub("CENSORED", secret_message))
+
+
+# Group substitution
+agent_names_regex = re.compile(r"Agent (\w)\w*")
+agents_secret_message = "Agent Alice told Agent Carol the Agent Eve knew Agent Bob was a double agent."
+print(agent_names_regex.sub(r"\1****", agents_secret_message))
