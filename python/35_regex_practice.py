@@ -73,3 +73,13 @@ print(match_object_14.group())
 
 match_object_15 = ha_regex.search("Ha")
 print(match_object_15 == None)
+
+
+# Greedy and Non-greedy (lazy) match
+greedy_regex = re.compile(r"(Ha){3,5}")
+match_object_16 = greedy_regex.search("HaHaHaHaHa")
+print(match_object_16.group())
+
+non_greedy_regex = re.compile(r"(Ha){3,5}?")
+match_object_17 = non_greedy_regex.search("HaHaHaHaHa")
+print(match_object_17.group())
