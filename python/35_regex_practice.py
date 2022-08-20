@@ -177,3 +177,13 @@ print(match_object_29.group())
 newline_regex = re.compile(r".*", re.DOTALL)
 match_object_30 = newline_regex.search(newline_string)
 print(match_object_30.group())
+
+
+# Case-Insensitive matching
+robocop_regex = re.compile(r"robocop", re.I)
+robocop_string_1 = "Robocop is a part man, part machine, all cop"
+robocop_string_2 = "ROBOCOP protects the innocent"
+robocop_string_3 = "Why the heck are we taking about robocop so much 🤖"
+print(robocop_regex.search(robocop_string_1).group())
+print(robocop_regex.search(robocop_string_2).group())
+print(robocop_regex.search(robocop_string_3).group())
