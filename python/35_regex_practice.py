@@ -141,3 +141,9 @@ print(match_object_24 == None)
 
 match_object_25 = whole_string_is_num.search("123   456789")
 print(match_object_25 == None)
+
+
+# . (Dot) the wildcard character
+at_regex = re.compile(r".at")
+at_string = "The cat in the hat sat on the flat mat"
+print(at_regex.findall(at_string))
