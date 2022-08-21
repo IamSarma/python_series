@@ -2,7 +2,7 @@
 import re
 
 
-date_regex = re.compile(r"\b(0|31)\b")
+date_regex = re.compile(r"\b(1|31)\b/\b(1|12)\b")
 input_date = input()
 match_object = date_regex.search(input_date)
 if match_object != None:
