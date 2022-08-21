@@ -7,7 +7,9 @@ import re
 def regex_strip(test_string, opt_arg=""):
     if not opt_arg:
         return re.sub(r" ", "", test_string)
+    else:
+        return re.sub(opt_arg, "", test_string)
 
 
-test_string = "   python   "
-print(regex_strip(test_string))
+test_string = "python"
+print(regex_strip(test_string, "p"))
