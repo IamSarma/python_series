@@ -5,7 +5,7 @@
 # Should contain at least one digit
 import re
 
-test_password = "Raviteja"
+test_password = "Ravit3ja"
 flag = 0
 
 if len(test_password) < 8:
@@ -13,6 +13,8 @@ if len(test_password) < 8:
 elif not re.search(r"[a-z]", test_password):
     flag = -1
 elif not re.search(r"[A-Z]", test_password):
+    flag = -1
+elif not re.search(r"[0-9]", test_password):
     flag = -1
 
 # Print message based on the flag status
