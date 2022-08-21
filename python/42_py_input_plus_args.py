@@ -12,5 +12,10 @@ import pyinputplus as pyip
 
 
 # Using greaterThan argument
-user_response_2 = pyip.inputNum("Enter a number: ", greaterThan=10)
-print(user_response_2)
+# user_response_2 = pyip.inputNum("Enter a number: ", greaterThan=10)
+# print(user_response_2)
+
+
+# Using lessThan argument
+user_response_3 = pyip.inputNum("Enter a number: ", lessThan=10)
+print(user_response_3)
