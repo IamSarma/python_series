@@ -7,5 +7,10 @@ import pyinputplus as pyip
 
 
 # Using max argument
-user_response_1 = pyip.inputNum("Enter a number: ", max=10)
-print(user_response_1)
+# user_response_1 = pyip.inputNum("Enter a number: ", max=10)
+# print(user_response_1)
+
+
+# Using greaterThan argument
+user_response_2 = pyip.inputNum("Enter a number: ", greaterThan=10)
+print(user_response_2)
