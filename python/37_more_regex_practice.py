@@ -26,3 +26,19 @@ if match_object_2 != None:
     print(match_object_2.group())
 else:
     print(match_object_2 != None)
+
+
+# Regex that matches a sentence
+# where the first word is either Alice, Bob or Carol
+# where the second word is either eats, pets or throws
+# where the thrid word is eithe apples, cats or baseballs
+# and the sentecne ends with a period
+# regex should be case-insensitive
+input_sentence = "Alice throws apples."
+sentence_regex = re.compile(
+    r"^(Alice|Bob|Carol) (eats|pets|throws) (apples|cats|baseballs)\.$", re.I)
+match_object_3 = sentence_regex.search(input_sentence)
+if match_object_3 != None:
+    print(match_object_3.group())
+else:
+    print(match_object_3 != None)
