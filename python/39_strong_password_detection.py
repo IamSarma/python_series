@@ -8,7 +8,9 @@ import re
 test_password = "raviteja"
 flag = 0
 
-if len(test_password) < 8:              # password characters length check
+if len(test_password) < 8:
+    flag = -1
+elif not re.search(r"[a-z]", test_password):
     flag = -1
 
 # Print message based on the flag status
