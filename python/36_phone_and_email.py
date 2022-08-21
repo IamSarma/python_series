@@ -38,5 +38,8 @@ for groups in phone_regex.findall(text):
     if groups[8] != "":
         phone_num += " x" + groups[8]
         matches.append(phone_num)
+# Email address match
+for groups in email_regex.findall(text):
+    matches.append(groups[0])
 
 # Copy results to the clipboard
