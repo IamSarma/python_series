@@ -20,6 +20,8 @@ elif not re.search(r"[0-9]", test_password):
     flag = -1
 elif not re.search(r"[_@$]", test_password):
     flag = -1
+elif re.search(r"\s", test_password):
+    flag = -1
 
 # Print message based on the flag status
 if flag == -1:
