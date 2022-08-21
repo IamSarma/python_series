@@ -5,7 +5,8 @@ import re
 
 
 def regex_strip(test_string, opt_arg=""):
-    return True
+    if not opt_arg:
+        return re.sub(r" ", "", test_string)
 
 
 test_string = "   python   "
