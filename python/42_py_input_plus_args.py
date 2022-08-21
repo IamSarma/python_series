@@ -21,5 +21,10 @@ import pyinputplus as pyip
 # print(user_response_3)
 
 # Using combination of argument(s)
-user_response_4 = pyip.inputNum("Enter a number: ", min=5, lessThan=10)
+# user_response_4 = pyip.inputNum("Enter a number: ", min=5, lessThan=10)
+# print(user_response_4)
+
+
+# Argument to use in case of blank input is allowed
+user_response_4 = pyip.inputNum("Enter a number: ", blank=True)
 print(user_response_4)
