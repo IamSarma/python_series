@@ -36,5 +36,10 @@ import pyinputplus as pyip
 
 
 # Using timeout argument
-user_response_6 = pyip.inputNum("Enter a number: ", timeout=3)
-print(user_response_6)
+# user_response_6 = pyip.inputNum("Enter a number: ", timeout=3)
+# print(user_response_6)
+
+
+# Using default argument to handle output of limit and timeout gracefully
+user_response_7 = pyip.inputNum("Enter a number: ", limit=2, default="N/A")
+print(user_response_7)
