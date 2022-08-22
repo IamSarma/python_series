@@ -45,7 +45,12 @@ import pyinputplus as pyip
 # print(user_response_7)
 
 
-# Using allowRegexed and blockRegexes as arguments
-user_response_8 = pyip.inputNum("Enter a Roman number: ", allowRegexes=[
-                                r"(I|V|X|L|C|D|M)+", r"zero"])
-print(user_response_8)
+# Using allowRegexes as argument
+# user_response_8 = pyip.inputNum("Enter a Roman number: ", allowRegexes=[
+#                                 r"(I|V|X|L|C|D|M)+", r"zero"])
+# print(user_response_8)
+
+
+# Using blockRegexes as argument
+user_response_9 = pyip.inputNum("Enter a number: ", blockRegexes=[r"[02468]$"])
+print(user_response_9)
