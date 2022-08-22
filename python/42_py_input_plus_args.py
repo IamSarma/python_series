@@ -57,6 +57,23 @@ import pyinputplus as pyip
 
 
 # allowRegexes list will override blockregexes list when used both
-user_response_10 = pyip.inputNum("Enter a word: ", allowRegexes=[
-                                 r"caterpillar", "category"], blockRegexes=[r"cat"])
-print(user_response_10)
+# user_response_10 = pyip.inputNum("Enter a word: ", allowRegexes=[
+#                                  r"caterpillar", "category"], blockRegexes=[r"cat"])
+# print(user_response_10)
+
+
+# Passing a custom validation function to inputCustom()
+def addsUpToTen(numbers):
+    numbers_list = list(numbers)
+    for i, digit in enumerate(numbers_list):
+        numbers_list[i] = int(digit)
+
+    if sum(numbers_list) != 10:
+        raise Exception(
+            f"The digits must add upto 10, not {sum(numbers_list)}")
+
+    return int(numbers)
+
+
+user_response_11 = pyip.inputCustom(
+    addsUpToTen, "Enter numbers that adds upto ten: ")
