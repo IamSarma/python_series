@@ -41,5 +41,11 @@ import pyinputplus as pyip
 
 
 # Using default argument to handle output of limit and timeout gracefully
-user_response_7 = pyip.inputNum("Enter a number: ", limit=2, default="N/A")
-print(user_response_7)
+# user_response_7 = pyip.inputNum("Enter a number: ", limit=2, default="N/A")
+# print(user_response_7)
+
+
+# Using allowRegexed and blockRegexes as arguments
+user_response_8 = pyip.inputNum("Enter a Roman number: ", allowRegexes=[
+                                r"(I|V|X|L|C|D|M)+", r"zero"])
+print(user_response_8)
