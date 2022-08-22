@@ -52,5 +52,11 @@ import pyinputplus as pyip
 
 
 # Using blockRegexes as argument
-user_response_9 = pyip.inputNum("Enter a number: ", blockRegexes=[r"[02468]$"])
-print(user_response_9)
+# user_response_9 = pyip.inputNum("Enter a number: ", blockRegexes=[r"[02468]$"])
+# print(user_response_9)
+
+
+# allowRegexes list will override blockregexes list when used both
+user_response_10 = pyip.inputNum("Enter a word: ", allowRegexes=[
+                                 r"caterpillar", "category"], blockRegexes=[r"cat"])
+print(user_response_10)
