@@ -34,3 +34,7 @@ print(Path.cwd())
 # Changing directory path using chdir()
 os.chdir("C:/Windows/System32")
 print(Path.cwd())
+
+
+# The home directory
+print(Path.home())
