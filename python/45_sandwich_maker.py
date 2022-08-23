@@ -20,3 +20,8 @@ is_cheese_required = pyip.inputYesNo("Do you want cheese? (Yes/No)\n")
 if is_cheese_required.lower() == "yes":
     user_cheese_pref = pyip.inputMenu(
         ["cheddar", "swiss", "mozzarella"], "Cheese type:\n")
+
+
+# Ask user if they want the topping(s)
+is_toppings_required = pyip.inputYesNo(
+    "Do you want mayo, mustard, lettuce or tomato? (Yes/No)\n")
