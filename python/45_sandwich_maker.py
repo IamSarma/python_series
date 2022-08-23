@@ -10,3 +10,7 @@ user_bread_pref = pyip.inputMenu(
 # Ask user for protein type
 user_protein_pref = pyip.inputMenu(
     ["chicken", "turkey", "ham", "tofu"], "Protein type:\n")
+
+
+# Ask user if they want cheese or not
+user_cheese_pref = pyip.inputYesNo("Do you want cheese? (Yes/No)\n")
