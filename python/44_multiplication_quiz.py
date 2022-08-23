@@ -21,3 +21,7 @@ for question_num in range(num_of_questions):
         print("Out of time!")
     except pyip.RetryLimitException:
         print("Out of tries")
+    else:
+        # This block of code run if no exception were raised in the try block
+        print("Correct!")
+        correct_answers + - 1
