@@ -1,5 +1,6 @@
 # Usage of pathlib module
 from pathlib import Path
+import os
 
 
 # Sample path object(s)
@@ -24,3 +25,7 @@ parent_folder = Path("C:/Users/MB")
 sub_folder = Path("python_projects")
 print(parent_folder / sub_folder)
 print(str(parent_folder / sub_folder))
+
+
+# Current working directory
+print(Path.cwd())
