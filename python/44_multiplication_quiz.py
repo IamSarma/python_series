@@ -24,4 +24,9 @@ for question_num in range(num_of_questions):
     else:
         # This block of code run if no exception were raised in the try block
         print("Correct!")
-        correct_answers + - 1
+        correct_answers += 1
+
+    # Brief pause to let user see the result
+    time.sleep(1)
+
+print(f"Score: {correct_answers} out of {num_of_questions}")
