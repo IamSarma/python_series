@@ -38,3 +38,7 @@ print(Path.cwd())
 
 # The home directory
 print(Path.home())
+
+
+# Creating new folders using os.makedirs() function
+os.makedirs("D:/test/sample/python")
