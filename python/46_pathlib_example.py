@@ -17,3 +17,10 @@ for file_name in my_files:
 print(Path("projects") / "python" / "pathlib")
 print(Path("projects") / Path("python/pathlib"))
 print(Path("projects") / Path("python", "pathlib"))
+
+
+# Example of joining parent and sub folder(s) paths
+parent_folder = Path("C:/Users/MB")
+sub_folder = Path("python_projects")
+print(parent_folder / sub_folder)
+print(str(parent_folder / sub_folder))
