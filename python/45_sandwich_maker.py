@@ -2,6 +2,20 @@
 # and display total cost after the user enters their selection
 import pyinputplus as pyip
 
+food_items_price = {
+    "wheat": 2,
+    "white": 1,
+    "sourdough": 2,
+    "chicken": 3,
+    "turkey": 4,
+    "ham": 3,
+    "tofu": 2,
+    "cheddar": 1,
+    "swiss": 2,
+    "mozzarella": 1,
+    "toppings": 1
+}
+
 # Ask user for bread type
 user_bread_pref = pyip.inputMenu(
     ["wheat", "white", "sourdough"], "Bread type:\n")
