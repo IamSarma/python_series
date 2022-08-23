@@ -42,3 +42,7 @@ print(Path.home())
 
 # Creating new folders using os.makedirs() function
 os.makedirs("D:/test/sample/python")
+
+
+# Creating singe folder using Path.mkdir() function
+Path(r"D:/test_1").mkdir()
