@@ -25,3 +25,7 @@ if is_cheese_required.lower() == "yes":
 # Ask user if they want the topping(s)
 is_toppings_required = pyip.inputYesNo(
     "Do you want mayo, mustard, lettuce or tomato? (Yes/No)\n")
+
+
+# Ask how many sandwiches are required, ensure it's either 1 or more
+num_of_sandwiches = pyip.inputInt("How many sandwiches do you want?\n", min=1)
