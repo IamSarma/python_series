@@ -29,3 +29,8 @@ print(str(parent_folder / sub_folder))
 
 # Current working directory
 print(Path.cwd())
+
+
+# Changing directory path using chdir()
+os.chdir("C:/Windows/System32")
+print(Path.cwd())
