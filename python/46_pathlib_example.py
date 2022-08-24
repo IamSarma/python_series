@@ -83,8 +83,12 @@ import os
 
 
 # Extracting different parts of a folder path using os module
-calc_file_path = "C:\Windows\System32\calc.exe"
-print(os.path.basename(calc_file_path))
-print(os.path.dirname(calc_file_path))
-print(os.path.split(calc_file_path))
-print(calc_file_path.split(os.sep))
+# calc_file_path = "C:\Windows\System32\calc.exe"
+# print(os.path.basename(calc_file_path))
+# print(os.path.dirname(calc_file_path))
+# print(os.path.split(calc_file_path))
+# print(calc_file_path.split(os.sep))
+
+
+# Finding file size
+print(os.path.getsize("C:\Windows\System32\calc.exe"))
