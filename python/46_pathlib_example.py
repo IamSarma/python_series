@@ -91,4 +91,8 @@ import os
 
 
 # Finding file size
-print(os.path.getsize("C:\Windows\System32\calc.exe"))
+# print(os.path.getsize("C:\Windows\System32\calc.exe"))
+
+
+# Finding file name(s)
+print(os.listdir("C:\Windows\System32"))
