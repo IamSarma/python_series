@@ -49,7 +49,16 @@ import os
 
 
 # Handling absolute and relative paths
-print(Path.cwd())
-print(Path.cwd().is_absolute())
-print(Path.cwd() / Path("my/relative/path"))
-print(Path.home() / Path("my/relative/path"))
+# print(Path.cwd())
+# print(Path.cwd().is_absolute())
+# print(Path.cwd() / Path("my/relative/path"))
+# print(Path.home() / Path("my/relative/path"))
+
+
+# Handling absolute and relative paths using os
+print(os.path.abspath("."))
+print(os.path.abspath(".\scripts"))
+print(os.path.isabs("."))
+print(os.path.isabs(os.path.abspath(".")))
+print(os.path.relpath("C:\\Windows", "C:\\"))
+print(os.path.relpath("C:\\Windows", "C:\\python\\scripts"))
