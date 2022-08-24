@@ -65,10 +65,18 @@ import os
 
 
 # Extracting part(s) of a folder path
-path_var = Path("C:/Users/MB/python.py")
-print(path_var.anchor)
-print(path_var.parent)
-print(path_var.name)
-print(path_var.stem)
-print(path_var.suffix)
-print(path_var.drive)
+# path_var = Path("C:/Users/MB/python.py")
+# print(path_var.anchor)
+# print(path_var.parent)
+# print(path_var.name)
+# print(path_var.stem)
+# print(path_var.suffix)
+# print(path_var.drive)
+
+
+# Extracting ancestor folders path using parents method
+print(Path.cwd())
+print(Path.cwd().parents[0])
+print(Path.cwd().parents[1])
+print(Path.cwd().parents[2])
+print(Path.cwd().parents[3])
