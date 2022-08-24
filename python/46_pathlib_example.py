@@ -122,5 +122,11 @@ import os
 
 
 # List file(s) using combination of * and ?
+# path_var = Path("C:\\Users\\MB\\Documents")
+# print(list(path_var.glob("*.?x?")))
+
+
+# Loop to iterate over the generator that glob returns
 path_var = Path("C:\\Users\\MB\\Documents")
-print(list(path_var.glob("*.?x?")))
+for text_file_path_object in path_var.glob("*.txt"):
+    print(text_file_path_object)
