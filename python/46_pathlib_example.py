@@ -99,8 +99,13 @@ import os
 
 
 # Finding folder size
-total_size = 0
-for file_name in os.listdir("C:\Windows\System32"):
-    total_size += os.path.getsize(
-        os.path.join("C:\Windows\System32", file_name))
-print(total_size)
+# total_size = 0
+# for file_name in os.listdir("C:\Windows\System32"):
+#     total_size += os.path.getsize(
+#         os.path.join("C:\Windows\System32", file_name))
+# print(total_size)
+
+
+# Modifying a list of files using glob patterns
+path_var = Path("C:\\Users\\MB\\Documents")
+print(list(path_var.glob("*")))
