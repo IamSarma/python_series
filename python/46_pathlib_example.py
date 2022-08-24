@@ -127,6 +127,17 @@ import os
 
 
 # Loop to iterate over the generator that glob returns
-path_var = Path("C:\\Users\\MB\\Documents")
-for text_file_path_object in path_var.glob("*.txt"):
-    print(text_file_path_object)
+# path_var = Path("C:\\Users\\MB\\Documents")
+# for text_file_path_object in path_var.glob("*.txt"):
+#     print(text_file_path_object)
+
+
+# Checking path validity
+windows_directory = Path("C:/Windows")
+not_exist_directory = Path("C:/This/Folder/Does/Not/Exist")
+calc_exe_file = Path("C:/Windows/System32/calc.exe")
+print(windows_directory.exists())
+print(not_exist_directory.exists())
+print(windows_directory.is_dir())
+print(calc_exe_file.is_file())
+print(calc_exe_file.is_dir())
