@@ -56,9 +56,19 @@ import os
 
 
 # Handling absolute and relative paths using os
-print(os.path.abspath("."))
-print(os.path.abspath(".\scripts"))
-print(os.path.isabs("."))
-print(os.path.isabs(os.path.abspath(".")))
-print(os.path.relpath("C:\\Windows", "C:\\"))
-print(os.path.relpath("C:\\Windows", "C:\\python\\scripts"))
+# print(os.path.abspath("."))
+# print(os.path.abspath(".\scripts"))
+# print(os.path.isabs("."))
+# print(os.path.isabs(os.path.abspath(".")))
+# print(os.path.relpath("C:\\Windows", "C:\\"))
+# print(os.path.relpath("C:\\Windows", "C:\\python\\scripts"))
+
+
+# Extracting part(s) of a folder path
+path_var = Path("C:/Users/MB/python.py")
+print(path_var.anchor)
+print(path_var.parent)
+print(path_var.name)
+print(path_var.stem)
+print(path_var.suffix)
+print(path_var.drive)
