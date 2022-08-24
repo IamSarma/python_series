@@ -117,5 +117,10 @@ import os
 
 
 # List file(s) with specific match
+# path_var = Path("C:\\Users\\MB\\Documents")
+# print(list(path_var.glob("project?.txt")))
+
+
+# List file(s) using combination of * and ?
 path_var = Path("C:\\Users\\MB\\Documents")
-print(list(path_var.glob("project?.txt")))
+print(list(path_var.glob("*.?x?")))
