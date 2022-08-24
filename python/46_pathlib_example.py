@@ -112,5 +112,10 @@ import os
 
 
 # List all text files
+# path_var = Path("C:\\Users\\MB\\Documents")
+# print(list(path_var.glob("*.txt")))
+
+
+# List file(s) with specific match
 path_var = Path("C:\\Users\\MB\\Documents")
-print(list(path_var.glob("*.txt")))
+print(list(path_var.glob("project?.txt")))
