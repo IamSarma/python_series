@@ -95,4 +95,12 @@ import os
 
 
 # Finding file name(s)
-print(os.listdir("C:\Windows\System32"))
+# print(os.listdir("C:\Windows\System32"))
+
+
+# Finding folder size
+total_size = 0
+for file_name in os.listdir("C:\Windows\System32"):
+    total_size += os.path.getsize(
+        os.path.join("C:\Windows\System32", file_name))
+print(total_size)
