@@ -107,5 +107,10 @@ import os
 
 
 # Modifying a list of files using glob patterns
+# path_var = Path("C:\\Users\\MB\\Documents")
+# print(list(path_var.glob("*")))
+
+
+# List all text files
 path_var = Path("C:\\Users\\MB\\Documents")
-print(list(path_var.glob("*")))
+print(list(path_var.glob("*.txt")))
