@@ -55,7 +55,7 @@ import os
 # print(Path.home() / Path("my/relative/path"))
 
 
-# Handling absolute and relative paths using os
+# Handling absolute and relative paths using os module
 # print(os.path.abspath("."))
 # print(os.path.abspath(".\scripts"))
 # print(os.path.isabs("."))
@@ -75,8 +75,16 @@ import os
 
 
 # Extracting ancestor folders path using parents method
-print(Path.cwd())
-print(Path.cwd().parents[0])
-print(Path.cwd().parents[1])
-print(Path.cwd().parents[2])
-print(Path.cwd().parents[3])
+# print(Path.cwd())
+# print(Path.cwd().parents[0])
+# print(Path.cwd().parents[1])
+# print(Path.cwd().parents[2])
+# print(Path.cwd().parents[3])
+
+
+# Extracting different parts of a folder path using os module
+calc_file_path = "C:\Windows\System32\calc.exe"
+print(os.path.basename(calc_file_path))
+print(os.path.dirname(calc_file_path))
+print(os.path.split(calc_file_path))
+print(calc_file_path.split(os.sep))
