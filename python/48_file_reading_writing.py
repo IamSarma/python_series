@@ -42,3 +42,10 @@ shelf_file = shelve.open("my_data")
 courses = ["python", "DSA", "React", "Vue"]
 shelf_file["courses"] = courses
 shelf_file.close()
+
+
+# Reading data from file created using shelve module
+shelf_file = shelve.open("my_data")
+print(type(shelf_file))
+print(shelf_file["courses"])
+shelf_file.close()
