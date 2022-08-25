@@ -71,5 +71,7 @@ for quiz_num in range(35):
     quiz_file.write("\n\n")
 
     # Shuffle the order of the states
+    states = list(capitals.keys())
+    random.shuffle(states)
 
     # Loop through all 50 states, making a question for each
