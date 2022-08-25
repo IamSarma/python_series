@@ -1,5 +1,6 @@
 # Reading and writing files
 from pathlib import Path
+import shelve
 
 # txt_file = Path("test.txt")
 # txt_file.write_text("Hello MB!")
@@ -22,15 +23,22 @@ from pathlib import Path
 
 # Writing to file(s)
 # Write
-test_file = open(Path.cwd() / "ome_more.txt", "w")
-test_file.write("Hello MB!\n")
-test_file.close()
+# test_file = open(Path.cwd() / "ome_more.txt", "w")
+# test_file.write("Hello MB!\n")
+# test_file.close()
 # Append
-test_file = open(Path.cwd() / "ome_more.txt", "a")
-test_file.write("Manog is a fruit :P")
-test_file.close()
+# test_file = open(Path.cwd() / "ome_more.txt", "a")
+# test_file.write("Manog is a fruit :P")
+# test_file.close()
 # Read
-test_file = open(Path.cwd() / "ome_more.txt")
-file_content = test_file.read()
-test_file.close()
-print(file_content)
+# test_file = open(Path.cwd() / "ome_more.txt")
+# file_content = test_file.read()
+# test_file.close()
+# print(file_content)
+
+
+# Storing variable values to hard drive using shelve module
+shelf_file = shelve.open("my_data")
+courses = ["python", "DSA", "React", "Vue"]
+shelf_file["courses"] = courses
+shelf_file.close()
