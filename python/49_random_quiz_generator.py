@@ -58,3 +58,11 @@ capitals = {
     'Wisconsin': 'Madison',
     'Wyoming': 'Cheyenne'
 }
+
+# Generate 35 quiz files
+for quiz_num in range(35):
+    # Create the quiz and answer key files
+
+    # write out the header for the quiz
+
+    # Loop through all 50 states, making a question for each
