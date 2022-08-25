@@ -8,3 +8,8 @@ from pathlib import Path
 
 # Opening files with the open() function
 test_file = open(Path.cwd() / "test.txt")
+
+
+# Reading the contents of the file
+file_content = test_file.read()
+print(file_content)
