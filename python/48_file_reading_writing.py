@@ -2,6 +2,7 @@
 from pathlib import Path
 import shelve
 import pprint
+import my_courses
 
 # txt_file = Path("test.txt")
 # txt_file.write_text("Hello MB!")
@@ -60,20 +61,26 @@ import pprint
 
 
 # Saving variables with the pprint.pformat() function
-courses = [
-    {
-        "name": "python",
-        "duration": "3 months",
-        "level": "intermediate",
-    },
-    {
-        "name": "react",
-        "duration": "1 months",
-        "level": "beginner",
-    },
-]
-print(pprint.pformat(courses))
+# courses = [
+#     {
+#         "name": "python",
+#         "duration": "3 months",
+#         "level": "intermediate",
+#     },
+#     {
+#         "name": "react",
+#         "duration": "1 months",
+#         "level": "beginner",
+#     },
+# ]
+# print(pprint.pformat(courses))
 
-file_object = open("my_courses.py", "w")
-file_object.write("courses = " + pprint.pformat(courses) + "\n")
-file_object.close()
+# file_object = open("my_courses.py", "w")
+# file_object.write("courses = " + pprint.pformat(courses) + "\n")
+# file_object.close()
+
+
+# Reading the file content of file(s) created using pprint.pformat() function
+print(my_courses.courses)
+print(my_courses.courses[0])
+print(my_courses.courses[0]["name"])
