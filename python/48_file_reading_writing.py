@@ -1,6 +1,7 @@
 # Reading and writing files
 from pathlib import Path
 import shelve
+import pprint
 
 # txt_file = Path("test.txt")
 # txt_file.write_text("Hello MB!")
@@ -38,21 +39,41 @@ import shelve
 
 
 # Storing variable values to hard drive using shelve module
-shelf_file = shelve.open("my_data")
-courses = ["python", "DSA", "React", "Vue"]
-shelf_file["courses"] = courses
-shelf_file.close()
+# shelf_file = shelve.open("my_data")
+# courses = ["python", "DSA", "React", "Vue"]
+# shelf_file["courses"] = courses
+# shelf_file.close()
 
 
 # Reading data from file created using shelve module
-shelf_file = shelve.open("my_data")
-print(type(shelf_file))
-print(shelf_file["courses"])
-shelf_file.close()
+# shelf_file = shelve.open("my_data")
+# print(type(shelf_file))
+# print(shelf_file["courses"])
+# shelf_file.close()
 
 
 # Getting list of keys and respective values from file created using shelve module
-shelf_file = shelve.open("my_data")
-print(list(shelf_file.keys()))
-print(list(shelf_file.values()))
-shelf_file.close()
+# shelf_file = shelve.open("my_data")
+# print(list(shelf_file.keys()))
+# print(list(shelf_file.values()))
+# shelf_file.close()
+
+
+# Saving variables with the pprint.pformat() function
+courses = [
+    {
+        "name": "python",
+        "duration": "3 months",
+        "level": "intermediate",
+    },
+    {
+        "name": "react",
+        "duration": "1 months",
+        "level": "beginner",
+    },
+]
+print(pprint.pformat(courses))
+
+file_object = open("my_courses.py", "w")
+file_object.write("courses = " + pprint.pformat(courses) + "\n")
+file_object.close()
