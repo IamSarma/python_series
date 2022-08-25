@@ -49,3 +49,10 @@ shelf_file = shelve.open("my_data")
 print(type(shelf_file))
 print(shelf_file["courses"])
 shelf_file.close()
+
+
+# Getting list of keys and respective values from file created using shelve module
+shelf_file = shelve.open("my_data")
+print(list(shelf_file.keys()))
+print(list(shelf_file.values()))
+shelf_file.close()
