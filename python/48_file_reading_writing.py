@@ -7,9 +7,21 @@ from pathlib import Path
 
 
 # Opening files with the open() function
-test_file = open(Path.cwd() / "test.txt")
+# test_file = open(Path.cwd() / "test.txt")
 
 
-# Reading the contents of the file
-file_content = test_file.read()
-print(file_content)
+# Reading the contents of the file using read() method
+# file_content = test_file.read()
+# print(file_content)
+
+
+# Reading multiple lines of file content using readlines() method
+# sonnet_file = open(Path.cwd() / "sonnet29.txt")
+# print(sonnet_file.readlines())
+
+
+# Writing to file(s)
+# Writing
+test_file = open(Path.cwd() / "ome_more.txt")
+test_file.write("Hello MB!")
+test_file.close()
