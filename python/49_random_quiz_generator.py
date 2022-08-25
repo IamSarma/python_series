@@ -66,6 +66,9 @@ for quiz_num in range(35):
     answer_key_file = open(f"captials_quiz_answers{quiz_num + 1}", "w")
 
     # write out the header for the quiz
+    quiz_file.write("Name:\n\nDate:\n\n:Period:\n\n")
+    quiz_file.write((" " * 20) + f"State Capitals Quiz (Form{quiz_num + 1})")
+    quiz_file.write("\n\n")
 
     # Shuffle the order of the states
 
