@@ -95,3 +95,6 @@ for quiz_num in range(35):
         # Write the answer key to a file
         answer_key_file.write(
             f"{question_num + 1}. {'ABCD'[answer_options.index(correct_answer)]}")
+
+    quiz_file.close()
+    answer_key_file.close()
