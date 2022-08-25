@@ -21,7 +21,7 @@ from pathlib import Path
 
 
 # Writing to file(s)
-# Writing
+# Write
 test_file = open(Path.cwd() / "ome_more.txt", "w")
 test_file.write("Hello MB!\n")
 test_file.close()
@@ -29,3 +29,8 @@ test_file.close()
 test_file = open(Path.cwd() / "ome_more.txt", "a")
 test_file.write("Manog is a fruit :P")
 test_file.close()
+# Read
+test_file = open(Path.cwd() / "ome_more.txt")
+file_content = test_file.read()
+test_file.close()
+print(file_content)
