@@ -7,3 +7,11 @@
 import shelve
 import pyperclip
 import sys
+
+mcb_shelf = shelve.open("mcb")
+
+# Save clipboard content
+
+# List keywords and load content
+
+mcb_shelf.close()
