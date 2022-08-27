@@ -2,13 +2,19 @@
 from pathlib import Path
 
 text_file = open(Path.cwd() / "mad_libs.txt")
-input_string = text_file.read()
+input_string = str(text_file.read())
 text_file.close()
 
-# Take user input and append the string
+# Take user input
 adjective_input = input("Enter an adjective:\n")
-noun_input = input("Enter a noun:\n")
+noun1_input = input("Enter a noun:\n")
 verb_input = input("Enter a verb:\n")
-noun_input = input("Enter a noun:\n")
+noun2_input = input("Enter a noun:\n")
 
-print(input_string)
+# Append the string and display to user
+output_string = input_string.replace("ADJECTIVE", adjective_input)
+output_string = output_string.replace("NOUN", noun1_input, 1)
+output_string = output_string.replace("VERB", verb_input)
+output_string = output_string.replace("NOUN", noun2_input)
+
+print(output_string)
