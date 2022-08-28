@@ -17,4 +17,6 @@ for file_name in os.listdir(target_folder):
         target_file = open(target_folder + "\\" + file_name)
         file_content = target_file.readline()
         match_object = user_regex.search(file_content)
+        if match_object != None:
+            print("Found match: " + match_object.group())
         target_file.close()
