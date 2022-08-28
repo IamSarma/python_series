@@ -11,4 +11,8 @@ path_object = Path.home()
 
 
 # Copying entire directory/folder
-shutil.copytree(path_object / "copy_me", path_object / "copy_me_backup")
+# shutil.copytree(path_object / "copy_me", path_object / "copy_me_backup")
+
+
+# Moving and renaming files and folders
+shutil.move(path_object / "copy_me.txt", path_object / "copy_here")
