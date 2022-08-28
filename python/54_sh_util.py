@@ -15,4 +15,6 @@ path_object = Path.home()
 
 
 # Moving and renaming files and folders
-shutil.move(path_object / "copy_me.txt", path_object / "copy_here")
+# shutil.move(path_object / "copy_me.txt", path_object / "copy_here")
+shutil.move(path_object / "copy_here/copy_me.txt",
+            path_object / "copy_here/new_copy_me.txt")
