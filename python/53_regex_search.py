@@ -15,4 +15,6 @@ user_regex = re.compile(user_regex)
 for file_name in os.listdir(target_folder):
     if file_name.endswith(".txt"):
         target_file = open(target_folder + "\\" + file_name)
+        file_content = target_file.readline()
+        match_object = user_regex.search(file_content)
         target_file.close()
