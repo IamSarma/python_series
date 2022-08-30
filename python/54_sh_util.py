@@ -33,4 +33,9 @@ path_object = Path.home()
 # os.rmdir(r"C:\Users\MB\empty_folder")
 
 # Deleting folder and containing sub-folder(s) and file(s)
-shutil.rmtree(r"C:\Users\MB\copy_me_backup")
+# shutil.rmtree(r"C:\Users\MB\copy_me_backup")
+
+# It's better to print the filename(s) and validate before deleting
+for file_name in Path.home().glob("*.txt"):
+    print(file_name)
+    # os.unlink(file_name)
