@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Reading zip file(s)
 home_path = Path.home()
-zip_file_object = zipfile.ZipFile(home_path / "test.zip")
+# zip_file_object = zipfile.ZipFile(home_path / "test.zip")
 # print(sample_zip.namelist())
 # zip_file_info = zip_file_object.getinfo("test.txt")
 # print(f"File size is: {zip_file_info.file_size} bytes")
@@ -19,7 +19,11 @@ zip_file_object = zipfile.ZipFile(home_path / "test.zip")
 # zip_file_object.close()
 
 # The below will extract the zip file content to specific directory
-zip_file_object.extractall(Path.home())
-zip_file_object.close()
+# zip_file_object.extractall(Path.home())
+# zip_file_object.close()
 
 # Creating and adding to zip file(s)
+zip_file_object = zipfile.ZipFile(home_path / "new.zip", "w")
+zip_file_object.write(home_path / "test.txt",
+                      compress_type=zipfile.ZIP_DEFLATED)
+zip_file_object.close()
