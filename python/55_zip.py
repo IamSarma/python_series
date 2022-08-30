@@ -23,7 +23,13 @@ home_path = Path.home()
 # zip_file_object.close()
 
 # Creating and adding to zip file(s)
-zip_file_object = zipfile.ZipFile(home_path / "new.zip", "w")
-zip_file_object.write(home_path / "test.txt",
+# write mode
+# zip_file_object = zipfile.ZipFile(home_path / "new.zip", "w")
+# zip_file_object.write(home_path / "test.txt",
+#                       compress_type=zipfile.ZIP_DEFLATED)
+
+# append mode
+zip_file_object = zipfile.ZipFile(home_path / "new.zip", "a")
+zip_file_object.write(home_path / "1.txt",
                       compress_type=zipfile.ZIP_DEFLATED)
 zip_file_object.close()
