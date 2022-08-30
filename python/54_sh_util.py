@@ -54,4 +54,7 @@ for folder_name, sub_folders, file_names in os.walk(r"C:\Users\MB\copy_me"):
     for sub_folder in sub_folders:
         print(f"Sub-folder of {folder_name}: {sub_folder}")
 
+    for file_name in file_names:
+        print(f"File inside {folder_name}: {file_name}")
+
     print()
