@@ -27,4 +27,7 @@ path_object = Path.home()
 
 # Permanently deleting files and folders
 # Delete the file at given path
-os.unlink(r"C:\Users\MB\copy_here\iam_copied.txt")
+# os.unlink(r"C:\Users\MB\copy_here\iam_copied.txt")
+
+# Deleting folder (empty folder only)
+os.rmdir(r"C:\Users\MB\empty_folder")
