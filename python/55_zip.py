@@ -14,7 +14,12 @@ zip_file_object = zipfile.ZipFile(home_path / "test.zip")
 #     f"Compressed file is {round(zip_file_info.file_size / zip_file_info.compress_size, 2)}x smaller")
 
 # Extracting from zip file(s)
-zip_file_object.extractall()
+# The below will extract the zip file content to current working directory
+# zip_file_object.extractall()
+# zip_file_object.close()
+
+# The below will extract the zip file content to specific directory
+zip_file_object.extractall(Path.home())
 zip_file_object.close()
 
 # Creating and adding to zip file(s)
