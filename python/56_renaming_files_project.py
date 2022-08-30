@@ -31,7 +31,8 @@ for american_file_name in os.listdir("."):
     year_part = match_object.group(4)
     after_part = match_object.group(5)
 
-# Form the European-style filename
+    # Form the European-style filename
+    european_file_name = f"{before_part}{day_part}-{month_part}-{year_part}{after_part}"
 
 
 # Get the full, absolute file path(s)
