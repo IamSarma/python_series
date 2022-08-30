@@ -43,4 +43,11 @@ path_object = Path.home()
 
 
 # Safe delete with the send2trash module
-send2trash.send2trash(r"C:\Users\MB\dont_delete.txt")
+# send2trash.send2trash(r"C:\Users\MB\dont_delete.txt")
+
+
+# Walking a directory tree
+# how to walk through folder(s) -> sub-folder(s) -> file(s)
+for folder_name, sub_folders, file_names in os.walk(r"C:\Users\MB\copy_me"):
+    print(f"The current folder is {folder_name}")
+    print()
