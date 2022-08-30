@@ -30,4 +30,7 @@ path_object = Path.home()
 # os.unlink(r"C:\Users\MB\copy_here\iam_copied.txt")
 
 # Deleting folder (empty folder only)
-os.rmdir(r"C:\Users\MB\empty_folder")
+# os.rmdir(r"C:\Users\MB\empty_folder")
+
+# Deleting folder and containing sub-folder(s) and file(s)
+shutil.rmtree(r"C:\Users\MB\copy_me_backup")
