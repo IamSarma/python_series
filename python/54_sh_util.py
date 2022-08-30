@@ -2,6 +2,7 @@
 import shutil
 import os
 from pathlib import Path
+import send2trash
 
 # Copying files
 path_object = Path.home()
@@ -36,6 +37,10 @@ path_object = Path.home()
 # shutil.rmtree(r"C:\Users\MB\copy_me_backup")
 
 # It's better to print the filename(s) and validate before deleting
-for file_name in Path.home().glob("*.txt"):
-    print(file_name)
-    # os.unlink(file_name)
+# for file_name in Path.home().glob("*.txt"):
+#     print(file_name)
+#     # os.unlink(file_name)
+
+
+# Safe delete with the send2trash module
+send2trash.send2trash(r"C:\Users\MB\dont_delete.txt")
