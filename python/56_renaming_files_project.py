@@ -34,8 +34,9 @@ for american_file_name in os.listdir("."):
     # Form the European-style filename
     european_file_name = f"{before_part}{day_part}-{month_part}-{year_part}{after_part}"
 
-
-# Get the full, absolute file path(s)
-
+    # Get the full, absolute file path(s)
+    absolute_directory = os.path.abspath(".")
+    american_file_name = os.path.join(absolute_directory, american_file_name)
+    european_file_name = os.path.join(absolute_directory, european_file_name)
 
 # Rename the file(s)
