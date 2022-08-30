@@ -21,5 +21,10 @@ path_object = Path.home()
 
 
 # FileNotFoundError in case of target path doesn't exist
-shutil.move(path_object / "copy_here/new_copy_me.txt",
-            path_object / "C:/does_not_exist/result/in/error")
+# shutil.move(path_object / "copy_here/new_copy_me.txt",
+#             path_object / "C:/does_not_exist/result/in/error")
+
+
+# Permanently deleting files and folders
+# Delete the file at given path
+os.unlink(r"C:\Users\MB\copy_here\iam_copied.txt")
