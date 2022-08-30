@@ -40,4 +40,5 @@ for american_file_name in os.listdir("."):
     european_file_name = os.path.join(absolute_directory, european_file_name)
 
     # Rename the file(s)
-    print(f"Renaming '{american_file_name}' to '{european_file_name}'")
+    # print(f"Renaming '{american_file_name}' to '{european_file_name}'")
+    shutil.move(american_file_name, european_file_name)
