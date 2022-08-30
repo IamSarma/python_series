@@ -18,4 +18,8 @@ def backupToZip(folder):
             break
         file_number += 1
 
+    # Create the zip file
+    print(f"Creating {zip_file_name}...")
+    backup_zip = zipfile.ZipFile(zip_file_name, "w")
+
     print("Folder backed up")
