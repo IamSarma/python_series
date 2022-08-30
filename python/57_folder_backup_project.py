@@ -33,6 +33,9 @@ def backupToZip(folder):
             if file_name.startswith(new_base) and file_name.endswith(".zip"):
                 continue        # don't backup the already backed up file(s)
             backup_zip.write(os.path.join(folder_name, file_name))
-    backup_zip.close()
 
-    print("Folder backed up")
+    backup_zip.close()
+    print("Folder backing up done")
+
+
+backupToZip("C:\\Users\\MB\\copy_me")
