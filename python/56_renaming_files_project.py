@@ -39,4 +39,5 @@ for american_file_name in os.listdir("."):
     american_file_name = os.path.join(absolute_directory, american_file_name)
     european_file_name = os.path.join(absolute_directory, european_file_name)
 
-# Rename the file(s)
+    # Rename the file(s)
+    print(f"Renaming '{american_file_name}' to '{european_file_name}'")
