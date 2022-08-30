@@ -16,5 +16,10 @@ path_object = Path.home()
 
 # Moving and renaming files and folders
 # shutil.move(path_object / "copy_me.txt", path_object / "copy_here")
-shutil.move(path_object / "copy_here/copy_me.txt",
-            path_object / "copy_here/new_copy_me.txt")
+# shutil.move(path_object / "copy_here/copy_me.txt",
+#             path_object / "copy_here/new_copy_me.txt")
+
+
+# FileNotFoundError in case of target path doesn't exist
+shutil.move(path_object / "copy_here/new_copy_me.txt",
+            path_object / "C:/does_not_exist/result/in/error")
