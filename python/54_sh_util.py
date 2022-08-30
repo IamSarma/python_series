@@ -50,4 +50,8 @@ path_object = Path.home()
 # how to walk through folder(s) -> sub-folder(s) -> file(s)
 for folder_name, sub_folders, file_names in os.walk(r"C:\Users\MB\copy_me"):
     print(f"The current folder is {folder_name}")
+
+    for sub_folder in sub_folders:
+        print(f"Sub-folder of {folder_name}: {sub_folder}")
+
     print()
