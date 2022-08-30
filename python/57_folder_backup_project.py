@@ -22,4 +22,9 @@ def backupToZip(folder):
     print(f"Creating {zip_file_name}...")
     backup_zip = zipfile.ZipFile(zip_file_name, "w")
 
+    # Walk the entire folder tree and compress the files in each folder
+    for folder_name, sub_folders, file_names in os.walk(folder):
+        print(f"Adding files in {folder_name}...")
+        backup_zip.write(folder_name)
+
     print("Folder backed up")
