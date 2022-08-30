@@ -5,13 +5,13 @@ from pathlib import Path
 
 # Reading zip file(s)
 home_path = Path.home()
-sample_zip = zipfile.ZipFile(home_path / "test.zip")
+zip_file_object = zipfile.ZipFile(home_path / "test.zip")
 # print(sample_zip.namelist())
-sample_zip_info = sample_zip.getinfo("test.txt")
-print(f"File size is: {sample_zip_info.file_size} bytes")
-print(f"File compressed size is: {sample_zip_info.compress_size} bytes")
+zip_file_info = zip_file_object.getinfo("test.txt")
+print(f"File size is: {zip_file_info.file_size} bytes")
+print(f"File compressed size is: {zip_file_info.compress_size} bytes")
 print(
-    f"Compressed file is {round(sample_zip_info.file_size / sample_zip_info.compress_size, 2)}x smaller")
+    f"Compressed file is {round(zip_file_info.file_size / zip_file_info.compress_size, 2)}x smaller")
 
 # Extracting from zip file(s)
 
