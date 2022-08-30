@@ -20,8 +20,9 @@ date_pattern = re.compile(r"""
 for american_file_name in os.listdir("."):
     match_object = date_pattern.search(american_file_name)
 
-# Skip file(s) without a date
-
+    # Skip file(s) without a date
+    if match_object == None:
+        continue
 
 # Get the different parts of the filename
 
