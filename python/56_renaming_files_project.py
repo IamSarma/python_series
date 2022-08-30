@@ -17,7 +17,8 @@ date_pattern = re.compile(r"""
 
 
 # Loop over the files in the working directory
-
+for american_file_name in os.listdir("."):
+    match_object = date_pattern.search(american_file_name)
 
 # Skip file(s) without a date
 
