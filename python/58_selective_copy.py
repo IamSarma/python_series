@@ -14,14 +14,13 @@ def copySpecificFiles(folder, file_extension):
 
     # Walk through the user provided directory and find the file(s)
     for folder_name, sub_folders, file_names in os.walk(folder):
-        print(
-            f"Searching for file(s) with extension {file_extension} in {folder_name}")
         for file_name in file_names:
             if file_name.endswith(".txt"):
-                file_full_path = os.path.join(base_folder, file_name)
+                file_full_path = os.path.join(
+                    os.path.abspath(folder_name), file_name)
                 shutil.move(file_full_path, target_folder)
                 print(
-                    f"Moved {file_name} from {base_folder} to {target_folder}")
+                    f"Moved {file_name} from {file_full_path} to {target_folder}")
 
 
 copySpecificFiles(
