@@ -10,3 +10,10 @@ def boxPrint(symbol, width, height):
     for i in range(height - 2):
         print(symbol + (" " * (width - 2)) + symbol)
     print(symbol * width)
+
+
+for symbol, width, height in (("*", 4, 4), ("O", 20, 5), ("x", 1, 3), ("ZZ", 3, 3)):
+    try:
+        boxPrint(symbol, width, height)
+    except Exception as err:
+        print(f"An exection occurred: {str(err)}")
