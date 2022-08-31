@@ -9,13 +9,12 @@ import shutil
 
 # Function to search and copy file(s) with user provided file extension
 def copySpecificFiles(folder, file_extension):
-    base_folder = os.path.abspath(folder)
     target_folder = Path.cwd() / "copy_here"
 
     # Walk through the user provided directory and find the file(s)
     for folder_name, sub_folders, file_names in os.walk(folder):
         for file_name in file_names:
-            if file_name.endswith(".txt"):
+            if file_name.endswith(file_extension):
                 file_full_path = os.path.join(
                     os.path.abspath(folder_name), file_name)
                 shutil.move(file_full_path, target_folder)
