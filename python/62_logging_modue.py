@@ -23,3 +23,4 @@ logging.basicConfig(level=logging.DEBUG,
 logging.debug("Some debugging details")
 logging.info("The logging module is working")
 logging.warning("An error message is about to be logged")
+logging.error("An error has occurred")
