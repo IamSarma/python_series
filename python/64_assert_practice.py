@@ -23,7 +23,18 @@ import logging
 
 
 # To save logging to text file
+# logging.basicConfig(level=logging.DEBUG,
+#                     format="%(asctime)s - %(levelname)s - %(message)s",
+#                     filename="log_to_text_file.txt")
+# logging.debug("This is a debug logging statement")
+
+
+# The 5 logging levels
 logging.basicConfig(level=logging.DEBUG,
-                    format="%(asctime)s - %(levelname)s - %(message)s",
-                    filename="log_to_text_file.txt")
+                    format="%(asctime)s - %(levelname)s - %(message)s")
+
 logging.debug("This is a debug logging statement")
+logging.info("This is a info logging statement")
+logging.warning("This is a warning logging statement")
+logging.error("This is a error logging statement")
+logging.critical("This is a critical logging statement")
