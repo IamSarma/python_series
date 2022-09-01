@@ -25,5 +25,7 @@ def switchLights(stop_light):
         elif stop_light[key] == "red":
             stop_light[key] = "green"
 
+        assert "red" in stop_light.values(), "Neither light is red!" + str(stop_light)
+
 
 switchLights(market_2nd)
