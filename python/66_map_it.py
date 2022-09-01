@@ -4,8 +4,15 @@
 
 import webbrowser
 import sys
+import pyperclip
 
-# webbrowser.open("https://www.inventwithpython.com/")
-# Get address from command line
+
 if len(sys.argv) > 1:
+    # Get address from command line
     web_address = " ".join(sys.argv[1:])
+else:
+    # Get address from clipboard
+    web_address = pyperclip.paste()
+
+
+webbrowser.open("https://www.google.com/maps/place/" + web_address)
