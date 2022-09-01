@@ -21,3 +21,4 @@ logging.basicConfig(level=logging.DEBUG,
 
 # Different level(s) of logging message(s)
 logging.debug("Some debugging details")
+logging.info("The logging module is working")
