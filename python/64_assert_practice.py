@@ -17,6 +17,13 @@
 
 # Lines of code to enable logging
 import logging
+# logging.basicConfig(level=logging.DEBUG,
+#                     format="%(asctime)s - %(levelname)s - %(message)s")
+# logging.debug("This is a debug logging statement")
+
+
+# To save logging to text file
 logging.basicConfig(level=logging.DEBUG,
-                    format="%(asctime)s - %(levelname)s - %(message)s")
+                    format="%(asctime)s - %(levelname)s - %(message)s",
+                    filename="log_to_text_file.txt")
 logging.debug("This is a debug logging statement")
