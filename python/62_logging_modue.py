@@ -1,7 +1,8 @@
 import logging
 # # logging.disable(logging.CRITICAL)
 logging.basicConfig(level=logging.DEBUG,
-                    format="%(asctime)s - %(levelname)s - %(message)s")
+                    format="%(asctime)s - %(levelname)s - %(message)s",
+                    filename="my_program_log.txt")
 # logging.debug("Start of program")
 
 
