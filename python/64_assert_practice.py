@@ -11,5 +11,12 @@
 
 
 # Assert statement that always triggers an AssertionError
-is_eligible = False
-assert is_eligible
+# is_eligible = False
+# assert is_eligible
+
+
+# Lines of code to enable logging
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format="%(asctime)s - %(levelname)s - %(message)s")
+logging.debug("This is a debug logging statement")
