@@ -11,13 +11,22 @@ import bs4
 # Using example HTML file
 example_file = open("example.html")
 example_soup = bs4.BeautifulSoup(example_file.read(), "html.parser")
-print(type(example_soup))
+# print(type(example_soup))
 
 # Extracting author details
 elems = example_soup.select("#author")
-print(type(elems))
-print(len(elems))
-print(type(elems[0]))
-print(str(elems[0]))
-print(elems[0].getText())
-print(elems[0].attrs)
+# print(type(elems))
+# print(len(elems))
+# print(type(elems[0]))
+# print(str(elems[0]))
+# print(elems[0].getText())
+# print(elems[0].attrs)
+
+# Extracting all the <p> elements
+p_elems = example_soup.select("p")
+print(str(p_elems[0]))
+print(str(p_elems[1]))
+print(str(p_elems[2]))
+print(p_elems[0].getText())
+print(p_elems[1].getText())
+print(p_elems[2].getText())
