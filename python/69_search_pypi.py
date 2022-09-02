@@ -14,5 +14,6 @@ res.raise_for_status()
 
 
 # Retrieve top search result links
+soup = bs4.BeautifulSoup(res.text, "html.parser")
 
 # Open a browser tab for each result
