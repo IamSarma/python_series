@@ -17,3 +17,10 @@ res.raise_for_status()
 soup = bs4.BeautifulSoup(res.text, "html.parser")
 
 # Open a browser tab for each result
+link_elems = soup.select(".eZt8xd")
+num_open = min(5, len(link_elems))
+
+for i in range(num_open):
+    url_to_open = "https://www.pypi.org" + link_elems[i].get("href")
+    print("Opening", url_to_open)
+    webbrowser.open(url_to_open)
