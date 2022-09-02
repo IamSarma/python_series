@@ -9,12 +9,12 @@ import bs4
 
 
 # Using example HTML file
-example_file = open("example.html")
-example_soup = bs4.BeautifulSoup(example_file.read(), "html.parser")
+# example_file = open("example.html")
+# example_soup = bs4.BeautifulSoup(example_file.read(), "html.parser")
 # print(type(example_soup))
 
 # Extracting author details
-elems = example_soup.select("#author")
+# elems = example_soup.select("#author")
 # print(type(elems))
 # print(len(elems))
 # print(type(elems[0]))
@@ -23,10 +23,18 @@ elems = example_soup.select("#author")
 # print(elems[0].attrs)
 
 # Extracting all the <p> elements
-p_elems = example_soup.select("p")
-print(str(p_elems[0]))
-print(str(p_elems[1]))
-print(str(p_elems[2]))
-print(p_elems[0].getText())
-print(p_elems[1].getText())
-print(p_elems[2].getText())
+# p_elems = example_soup.select("p")
+# print(str(p_elems[0]))
+# print(str(p_elems[1]))
+# print(str(p_elems[2]))
+# print(p_elems[0].getText())
+# print(p_elems[1].getText())
+# print(p_elems[2].getText())
+
+# Getting data from an Element's Attributes
+soup = bs4.BeautifulSoup(open("example.html"), "html.parser")
+span_elem = soup.select("span")[0]
+print(str(span_elem))
+print(span_elem.get("id"))
+print(span_elem.get("non_existent_id") == None)
+print(span_elem.attrs)
