@@ -13,7 +13,18 @@ browser = webdriver.Firefox()
 
 
 # Performing click operation
-browser.get("https://www.python.org")
-link_elem = browser.find_element(By.ID, "about")
-link_elem.location_once_scrolled_into_view
-link_elem.click()
+# browser.get("https://www.python.org")
+# link_elem = browser.find_element(By.ID, "about")
+# link_elem.location_once_scrolled_into_view
+# link_elem.click()
+
+
+# Filling out and submitting forms
+browser.get("https://login.metafilter.com")
+user_elem = browser.find_element(By.ID, "user_name")
+user_elem.send_keys("test user")
+
+password_elem = browser.find_element(By.ID, "user_pass")
+password_elem.send_keys("test password")
+
+password_elem.submit()
