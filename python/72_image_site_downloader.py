@@ -11,3 +11,9 @@ os.makedirs("photos", exist_ok=True)
 
 # Generate target url
 url = "https://unsplash.com/s/photos/" + " ".join(sys.argv[1:])
+
+# Downloading top 10 search result photso
+for i in range(1, 11):
+    res = requests.get(url)
+    res.raise_for_status()
+    soup = bs4.BeautifulSoup(res.text, "html.parser")
