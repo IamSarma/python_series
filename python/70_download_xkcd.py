@@ -36,5 +36,7 @@ while not url.endswith("#"):
     image_file.close()
 
     # Get the Prev button's URL
+    prev_link = soup.select('a[rel="prev"]')[0]
+    url = "https://www.xkcd.com" + prev_link.get("href")
 
 print("Done")
