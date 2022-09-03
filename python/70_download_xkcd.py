@@ -28,6 +28,12 @@ while not url.endswith("#"):
     res.raise_for_status()
 
     # Save the image to ./xkcd
+    image_file = open(os.path.join("xkcd", os.path.basename(comic_url)), "wb")
+
+    for chunk in res.iter_content(100000):
+        image_file.write(chunk)
+
+    image_file.close()
 
     # Get the Prev button's URL
 
