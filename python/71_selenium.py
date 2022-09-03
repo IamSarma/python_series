@@ -30,7 +30,14 @@ browser = webdriver.Firefox()
 
 
 # Sending special keys
-browser.get("https://www.nostarch.com")
-html_elem = browser.find_element(By.TAG_NAME, "html")
-html_elem.send_keys(Keys.END)
-html_elem.send_keys(Keys.HOME)
+# browser.get("https://www.nostarch.com")
+# html_elem = browser.find_element(By.TAG_NAME, "html")
+# html_elem.send_keys(Keys.END)
+# html_elem.send_keys(Keys.HOME)
+
+
+# Clicking browser buttons
+browser.back()
+browser.forward()
+browser.refresh()
+browser.quit()
