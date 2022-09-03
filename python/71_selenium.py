@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 # Finding an element with class name
 browser = webdriver.Firefox()
@@ -20,11 +21,16 @@ browser = webdriver.Firefox()
 
 
 # Filling out and submitting forms
-browser.get("https://login.metafilter.com")
-user_elem = browser.find_element(By.ID, "user_name")
-user_elem.send_keys("test user")
+# browser.get("https://login.metafilter.com")
+# user_elem = browser.find_element(By.ID, "user_name")
+# user_elem.send_keys("test user")
+# password_elem = browser.find_element(By.ID, "user_pass")
+# password_elem.send_keys("test password")
+# password_elem.submit()
 
-password_elem = browser.find_element(By.ID, "user_pass")
-password_elem.send_keys("test password")
 
-password_elem.submit()
+# Sending special keys
+browser.get("https://www.nostarch.com")
+html_elem = browser.find_element(By.TAG_NAME, "html")
+html_elem.send_keys(Keys.END)
+html_elem.send_keys(Keys.HOME)
