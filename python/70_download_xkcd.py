@@ -23,6 +23,9 @@ while not url.endswith("#"):
         comic_url = "https:" + comic_elem[0].get("src")
 
     # Download the image
+    print(f"Downloading image {comic_url}")
+    res = requests.get(comic_url)
+    res.raise_for_status()
 
     # Save the image to ./xkcd
 
