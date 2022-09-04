@@ -35,5 +35,10 @@ sheet = wb["Sheet1"]
 
 
 # Loop through every other row / odd row(s)
-for i in range(1, 8, 2):
-    print(i, sheet.cell(row=i, column=2).value)
+# for i in range(1, 8, 2):
+#     print(i, sheet.cell(row=i, column=2).value)
+
+
+# Getting the highest row and column number
+print(f"Number of rows containing data: {sheet.max_row}")
+print(f"Number of columns containing data: {sheet.max_column}")
