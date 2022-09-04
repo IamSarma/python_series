@@ -30,5 +30,10 @@ sheet = wb["Sheet1"]
 
 
 # Using cell() method to point to specific cell
-print(sheet.cell(row=1, column=2))
-print(sheet.cell(row=1, column=2).value)
+# print(sheet.cell(row=1, column=2))
+# print(sheet.cell(row=1, column=2).value)
+
+
+# Loop through every other row / odd row(s)
+for i in range(1, 8, 2):
+    print(i, sheet.cell(row=i, column=2).value)
