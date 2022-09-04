@@ -17,5 +17,13 @@ wb = openpyxl.load_workbook("example.xlsx")
 
 # Getting cells from the sheets
 sheet = wb["Sheet1"]
-print(sheet["A1"])
-print(sheet["A1"].value)
+# print(sheet["A1"])
+# print(sheet["A1"].value)
+
+
+# Getting the row, column and value from the cell
+c = sheet["B1"]
+print(c.value)
+print(f"Row {c.row}, Column {c.column} is {c.value}")
+print(f"Cell {c.coordinate} is {c.value}")
+print(sheet["C1"].value)
