@@ -57,7 +57,10 @@ sheet = wb["Sheet1"]
 
 # Getting rows and columns from the sheets
 # print(tuple(sheet["A1":"C3"]))
-for row_of_cell_objects in sheet["A1":"C3"]:
-    for cell_object in row_of_cell_objects:
-        print(cell_object.coordinate, cell_object.value)
-    print("----- END OF ROW -----")
+# for row_of_cell_objects in sheet["A1":"C3"]:
+#     for cell_object in row_of_cell_objects:
+#         print(cell_object.coordinate, cell_object.value)
+#     print("----- END OF ROW -----")
+
+for cell_object in list(sheet.columns)[1]:
+    print(cell_object.value)
