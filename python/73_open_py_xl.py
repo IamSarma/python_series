@@ -46,10 +46,18 @@ sheet = wb["Sheet1"]
 
 
 # Converting between column letters and numbers
-print(get_column_letter(1))
-print(get_column_letter(2))
-print(get_column_letter(200))
+# print(get_column_letter(1))
+# print(get_column_letter(2))
+# print(get_column_letter(200))
 
-print(get_column_letter(sheet.max_column))
-print(column_index_from_string("A"))
-print(column_index_from_string("ZZ"))
+# print(get_column_letter(sheet.max_column))
+# print(column_index_from_string("A"))
+# print(column_index_from_string("ZZ"))
+
+
+# Getting rows and columns from the sheets
+# print(tuple(sheet["A1":"C3"]))
+for row_of_cell_objects in sheet["A1":"C3"]:
+    for cell_object in row_of_cell_objects:
+        print(cell_object.coordinate, cell_object.value)
+    print("----- END OF ROW -----")
