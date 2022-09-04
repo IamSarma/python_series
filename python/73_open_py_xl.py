@@ -1,4 +1,5 @@
 import openpyxl
+from openpyxl.utils import get_column_letter, column_index_from_string
 
 # Opening Excel file
 wb = openpyxl.load_workbook("example.xlsx")
@@ -40,5 +41,15 @@ sheet = wb["Sheet1"]
 
 
 # Getting the highest row and column number
-print(f"Number of rows containing data: {sheet.max_row}")
-print(f"Number of columns containing data: {sheet.max_column}")
+# print(f"Number of rows containing data: {sheet.max_row}")
+# print(f"Number of columns containing data: {sheet.max_column}")
+
+
+# Converting between column letters and numbers
+print(get_column_letter(1))
+print(get_column_letter(2))
+print(get_column_letter(200))
+
+print(get_column_letter(sheet.max_column))
+print(column_index_from_string("A"))
+print(column_index_from_string("ZZ"))
