@@ -22,8 +22,13 @@ sheet = wb["Sheet1"]
 
 
 # Getting the row, column and value from the cell
-c = sheet["B1"]
-print(c.value)
-print(f"Row {c.row}, Column {c.column} is {c.value}")
-print(f"Cell {c.coordinate} is {c.value}")
-print(sheet["C1"].value)
+# c = sheet["B1"]
+# print(c.value)
+# print(f"Row {c.row}, Column {c.column} is {c.value}")
+# print(f"Cell {c.coordinate} is {c.value}")
+# print(sheet["C1"].value)
+
+
+# Using cell() method to point to specific cell
+print(sheet.cell(row=1, column=2))
+print(sheet.cell(row=1, column=2).value)
