@@ -31,3 +31,4 @@ print(wb.sheetnames)
 del wb["Middle Sheet"]
 del wb["Sheet1"]
 print(wb.sheetnames)
+wb.save()
