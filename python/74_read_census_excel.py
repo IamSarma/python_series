@@ -18,3 +18,6 @@ for row in range(2, sheet.max_row + 1):
     state_name = sheet["B" + str(row)].value
     county_name = sheet["C" + str(row)].value
     population = sheet["D" + str(row)].value
+
+    # Make sure the key for this state exists
+    county_data.setdefault(state_name, {})
