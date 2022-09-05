@@ -22,3 +22,8 @@ wb = openpyxl.Workbook()
 print(wb.sheetnames)
 wb.create_sheet()
 print(wb.sheetnames)
+# Create new sheet at index 0
+wb.create_sheet(index=0, title="First Sheet")
+print(wb.sheetnames)
+wb.create_sheet(index=2, title="Middle Sheet")
+print(wb.sheetnames)
