@@ -23,7 +23,11 @@ for row in range(2, sheet.max_row + 1):
     county_data.setdefault(state_name, {})
 
     # Make sure the key for this county for this state exists
-    county_data[state_name].setdefault(county_name, {"tracts": 0, "pop": 0})
+    county_data[state_name].setdefault(
+        county_name, {"tracts": 0, "population": 0})
 
     # Each row represents one census tract, so increment by 1
     county_data[state_name][county_name]["tracts"] += 1
+
+    # Increase the county population by the population in this census tract
+    county_data[state_name][county_name]["population"] += int(population)
