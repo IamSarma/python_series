@@ -27,3 +27,7 @@ wb.create_sheet(index=0, title="First Sheet")
 print(wb.sheetnames)
 wb.create_sheet(index=2, title="Middle Sheet")
 print(wb.sheetnames)
+# Removing sheets
+del wb["Middle Sheet"]
+del wb["Sheet1"]
+print(wb.sheetnames)
