@@ -11,7 +11,14 @@ import openpyxl
 
 
 # Saving Excel workbook
+# wb = openpyxl.Workbook()
+# sheet = wb.active
+# sheet.title = "master_data"
+# wb.save("created_with_python.xlsx")
+
+
+# Creating and removing sheets
 wb = openpyxl.Workbook()
-sheet = wb.active
-sheet.title = "master_data"
-wb.save("created_with_python.xlsx")
+print(wb.sheetnames)
+wb.create_sheet()
+print(wb.sheetnames)
