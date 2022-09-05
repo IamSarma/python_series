@@ -31,3 +31,11 @@ for row in range(2, sheet.max_row + 1):
 
     # Increase the county population by the population in this census tract
     county_data[state_name][county_name]["population"] += int(population)
+
+
+# Open a new text file and write the contents of county_data to it
+print("Writing results...")
+result_file = open("census_2010.py", "w")
+result_file.write("all_data = " + pprint.pformat(county_data))
+result_file.close()
+print("Done")
