@@ -4,8 +4,17 @@
 import openpyxl
 import pprint
 
+
 # Read the spreadsheet data
 print("Opening workbook...")
 wb = openpyxl.load_workbook("censuspopdata.xlsx")
 sheet = wb["Population by Census Tract"]
 county_data = {}
+
+
+# Fill in county_data with each county's population and tracts
+print("Reading rows...")
+for row in range(2, sheet.max_row + 1):
+    state_name = sheet["B" + str(row)].value
+    county_name = sheet["C" + str(row)].value
+    population = sheet["D" + str(row)].value
