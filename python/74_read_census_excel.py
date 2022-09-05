@@ -21,3 +21,6 @@ for row in range(2, sheet.max_row + 1):
 
     # Make sure the key for this state exists
     county_data.setdefault(state_name, {})
+
+    # Make sure the key for this county for this state exists
+    county_data[state_name].setdefault(county_name, {"tracts": 0, "pop": 0})
