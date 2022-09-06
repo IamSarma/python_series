@@ -23,7 +23,15 @@ sheet = wb["Sheet"]
 
 
 # Formulas
-sheet["A1"] = 100
-sheet["A2"] = 200
-sheet["A3"] = "=SUM(A1:A2)"
-wb.save("write_formula.xlsx")
+# sheet["A1"] = 100
+# sheet["A2"] = 200
+# sheet["A3"] = "=SUM(A1:A2)"
+# wb.save("write_formula.xlsx")
+
+
+# Setting row height and column width
+sheet["A1"] = "Tall row"
+sheet["B2"] = "Wide column"
+sheet.row_dimensions[1].height = 70
+sheet.column_dimensions["B"].width = 20
+wb.save("row_column_dimensions.xlsx")
