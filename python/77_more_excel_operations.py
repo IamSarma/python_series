@@ -11,12 +11,19 @@ sheet = wb["Sheet"]
 
 
 # Font objecct(s)
-font_obj_1 = Font(name="Times New Roman", bold=True)
-sheet["A1"] = "Bold Times New Roman"
-sheet["A1"].font = font_obj_1
+# font_obj_1 = Font(name="Times New Roman", bold=True)
+# sheet["A1"] = "Bold Times New Roman"
+# sheet["A1"].font = font_obj_1
 
-font_obj_2 = Font(size=24, italic=True)
-sheet["B3"] = "24 pt Italic"
-sheet["B3"].font = font_obj_2
+# font_obj_2 = Font(size=24, italic=True)
+# sheet["B3"] = "24 pt Italic"
+# sheet["B3"].font = font_obj_2
 
-wb.save("styles.xlsx")
+# wb.save("styles.xlsx")
+
+
+# Formulas
+sheet["A1"] = 100
+sheet["A2"] = 200
+sheet["A3"] = "=SUM(A1:A2)"
+wb.save("write_formula.xlsx")
