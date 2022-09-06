@@ -14,3 +14,9 @@ sheet = wb["Sheet"]
 font_obj_1 = Font(name="Times New Roman", bold=True)
 sheet["A1"] = "Bold Times New Roman"
 sheet["A1"].font = font_obj_1
+
+font_obj_2 = Font(size=24, italic=True)
+sheet["B3"] = "24 pt Italic"
+sheet["B3"].font = font_obj_2
+
+wb.save("styles.xlsx")
