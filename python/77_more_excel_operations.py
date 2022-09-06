@@ -38,15 +38,22 @@ sheet = wb["Sheet"]
 
 
 # Merging and Unmerging cells
-sheet["A1"] = "Twelve cells merged together"
-sheet["C5"] = "Two merged cells"
+# sheet["A1"] = "Twelve cells merged together"
+# sheet["C5"] = "Two merged cells"
 
-# Merging
-sheet.merge_cells("A1:D3")
-sheet.merge_cells("C5:D5")
-wb.save("merged.xlsx")
+# # Merging
+# sheet.merge_cells("A1:D3")
+# sheet.merge_cells("C5:D5")
+# wb.save("merged.xlsx")
 
-# Unmerging
-sheet.unmerge_cells("A1:D3")
-sheet.unmerge_cells("C5:D5")
-wb.save("un_merged.xlsx")
+# # Unmerging
+# sheet.unmerge_cells("A1:D3")
+# sheet.unmerge_cells("C5:D5")
+# wb.save("un_merged.xlsx")
+
+
+# Freeze panes
+wb = openpyxl.load_workbook("produce_sales.xlsx")
+sheet = wb.active
+sheet.freeze_panes = "A2"
+wb.save("freeze_example.xlsx")
