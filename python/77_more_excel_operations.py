@@ -30,8 +30,18 @@ sheet = wb["Sheet"]
 
 
 # Setting row height and column width
-sheet["A1"] = "Tall row"
-sheet["B2"] = "Wide column"
-sheet.row_dimensions[1].height = 70
-sheet.column_dimensions["B"].width = 20
-wb.save("row_column_dimensions.xlsx")
+# sheet["A1"] = "Tall row"
+# sheet["B2"] = "Wide column"
+# sheet.row_dimensions[1].height = 70
+# sheet.column_dimensions["B"].width = 20
+# wb.save("row_column_dimensions.xlsx")
+
+
+# Merging and Unmerging cells
+sheet["A1"] = "Twelve cells merged together"
+sheet["C5"] = "Two merged cells"
+
+sheet.merge_cells("A1:D3")
+sheet.merge_cells("C5:D5")
+
+wb.save("merged.xlsx")
