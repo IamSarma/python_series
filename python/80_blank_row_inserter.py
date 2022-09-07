@@ -10,10 +10,13 @@ wb = openpyxl.load_workbook("insert_blank_row.xlsx")
 sheet = wb["Sheet1"]
 
 # User input - row number
-row_number = sys.argv[1]
+row_number = int(sys.argv[1])
 
 # User input - number of blank rows
-blank_rows_num = sys.argv[2]
+blank_rows_num = int(sys.argv[2])
+
+# Inserting blank row(s)
+sheet.insert_rows(row_number + 1, amount=blank_rows_num)
 
 # Save workbook
 wb.save("insert_blank_row.xlsx")
