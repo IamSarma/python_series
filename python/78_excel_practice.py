@@ -31,5 +31,8 @@ print(f"Column number: {c.column}")
 # Get last row
 print(f"Last/Max row: {sheet.max_row}")
 
+# Get last column
+print(f"Last/Max column: {sheet.max_column}")
+
 # Save workbook
 wb.save("excel_practice.xlsx")
