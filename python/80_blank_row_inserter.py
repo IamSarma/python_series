@@ -12,5 +12,8 @@ sheet = wb["Sheet1"]
 # User input - row number
 row_number = sys.argv[1]
 
+# User input - number of blank rows
+blank_rows_num = sys.argv[2]
+
 # Save workbook
 wb.save("insert_blank_row.xlsx")
