@@ -28,5 +28,8 @@ print("Selected cell is A1")
 print(f"Row number: {c.row}")
 print(f"Column number: {c.column}")
 
+# Get last row
+print(f"Last/Max row: {sheet.max_row}")
+
 # Save workbook
 wb.save("excel_practice.xlsx")
