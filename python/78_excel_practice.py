@@ -54,5 +54,8 @@ print(type(range_of_cell_values))
 # Set formula in a cell
 sheet["G3"] = "=SUM(G1:G2)"
 
+# Set row height
+sheet.row_dimensions[5].height = 100
+
 # Save workbook
 wb.save("excel_practice.xlsx")
