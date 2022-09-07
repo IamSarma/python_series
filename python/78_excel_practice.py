@@ -46,5 +46,10 @@ col_index = 8
 col_str_letter = get_column_letter(col_index)
 print(f"The string letter for column index {col_index} is: {col_str_letter}")
 
+# Get a tuple of all the cell objects in specific range of cells
+range_of_cell_values = sheet["A1:C1"]
+print(range_of_cell_values)
+print(type(range_of_cell_values))
+
 # Save workbook
 wb.save("excel_practice.xlsx")
