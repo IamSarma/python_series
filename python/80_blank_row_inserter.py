@@ -4,7 +4,7 @@ import openpyxl
 import sys
 
 # Create workbook object
-wb = openpyxl.Workbook()
+wb = openpyxl.load_workbook("insert_blank_row.xlsx")
 
 # Save workbook
-wb.save("blank_row_inserter.xlsx")
+wb.save("insert_blank_row.xlsx")
