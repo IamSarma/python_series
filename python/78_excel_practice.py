@@ -16,5 +16,8 @@ print(sheet)
 act_sheet = wb.active
 print(act_sheet)
 
+# Set cell value
+sheet["A1"] = "Python"
+
 # Save workbook
-wb.save
+wb.save("excel_practice.xlsx")
