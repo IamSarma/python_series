@@ -1,5 +1,6 @@
 # Excel practice question(s)
 import openpyxl
+from openpyxl.utils import column_index_from_string
 
 
 # Open/load workbook
@@ -33,6 +34,10 @@ print(f"Last/Max row: {sheet.max_row}")
 
 # Get last column
 print(f"Last/Max column: {sheet.max_column}")
+
+# Get column index as integer value
+col_int_index = column_index_from_string("C")
+print(f"The index of column C is: {col_int_index}")
 
 # Save workbook
 wb.save("excel_practice.xlsx")
