@@ -57,5 +57,8 @@ sheet["G3"] = "=SUM(G1:G2)"
 # Set row height
 sheet.row_dimensions[5].height = 100
 
+# Hide column
+sheet.column_dimensions["C"].hidden = True
+
 # Save workbook
 wb.save("excel_practice.xlsx")
