@@ -51,5 +51,8 @@ range_of_cell_values = sheet["A1:C1"]
 print(range_of_cell_values)
 print(type(range_of_cell_values))
 
+# Set formula in a cell
+sheet["G3"] = "=SUM(G1:G2)"
+
 # Save workbook
 wb.save("excel_practice.xlsx")
