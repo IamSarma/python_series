@@ -31,9 +31,11 @@ print(f"Column number: {c.column}")
 
 # Get last row
 print(f"Last/Max row: {sheet.max_row}")
+print(f"The data type of sheet.max_row is: {type(sheet.max_row)}")
 
 # Get last column
 print(f"Last/Max column: {sheet.max_column}")
+print(f"The data type of sheet.max_column is: {type(sheet.max_column)}")
 
 # Get column index as integer value
 col_int_index = column_index_from_string("C")
