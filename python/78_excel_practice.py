@@ -11,3 +11,7 @@ print(wb.sheetnames)
 # Retrieve worksheet object
 sheet = wb["Sheet1"]
 print(sheet)
+
+# Retrieve worksheet object for activesheet
+act_sheet = wb.active
+print(act_sheet)
