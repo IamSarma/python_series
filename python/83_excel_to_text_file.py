@@ -21,7 +21,9 @@ for i in range(1, last_column + 1):
     text_file_name = str(i) + ".txt"
     text_file_obj = open(os.path.join(target_folder, text_file_name), "w")
     for j in range(1, last_row + 1):
-        pass
+        if not sheet.cell(row=j, column=i).value is None:
+            text_file_obj.write(str(sheet.cell(row=j, column=i).value))
+    text_file_obj.close()
 
 
 # Save workbook
