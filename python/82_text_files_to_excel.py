@@ -7,9 +7,11 @@ import os
 target_folder = os.getcwd() + "/text_files"
 
 # Loop through target folder to read text file contents
-for file in os.listdir(target_folder):
-    if file.endswith(".txt"):
-        print(file)
+for file_name in os.listdir(target_folder):
+    if file_name.endswith(".txt"):
+        text_file_obj = open(os.path.join(target_folder, file_name), "r")
+        print(text_file_obj.readlines())
+        text_file_obj.close()
 
 # Create workbook object
 # wb = openpyxl.load_workbook("text_to_excel.xlsx")
