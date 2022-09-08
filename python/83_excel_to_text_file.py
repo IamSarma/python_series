@@ -12,5 +12,9 @@ wb = openpyxl.load_workbook("text_to_excel.xlsx")
 # Create sheet object
 sheet = wb["Sheet1"]
 
+# Get last/max row and last/max column to loop through data
+last_row = sheet.max_row
+last_column = sheet.max_column
+
 # Save workbook
 wb.save("text_to_excel.xlsx")
