@@ -3,11 +3,14 @@
 import openpyxl
 import os
 
+# Folder path containing text file(s)
+target_folder = os.getcwd() + "/text_files"
+
 # Create workbook object
-wb = openpyxl.load_workbook()
+wb = openpyxl.load_workbook("text_to_excel.xlsx")
 
 # Create sheet object
 sheet = wb["Sheet1"]
 
 # Save workbook
-wb.save()
+wb.save("text_to_excel.xlsx")
