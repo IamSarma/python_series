@@ -16,5 +16,13 @@ sheet = wb["Sheet1"]
 last_row = sheet.max_row
 last_column = sheet.max_column
 
+# Loop through spreadsheet data, create and copy to text file(s)
+for i in range(1, last_column + 1):
+    text_file_name = str(i) + ".txt"
+    text_file_obj = open(os.path.join(target_folder, text_file_name), "w")
+    for j in range(1, last_row + 1):
+        pass
+
+
 # Save workbook
 wb.save("text_to_excel.xlsx")
