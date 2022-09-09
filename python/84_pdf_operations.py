@@ -13,4 +13,6 @@ import PyPDF2
 # Decrypting PDFs
 pdf_reader = PyPDF2.PdfFileReader(open("encrypted.pdf", "rb"))
 print(pdf_reader.isEncrypted)
+# print(pdf_reader.getPage(0))
+pdf_reader.decrypt("rosebud")
 print(pdf_reader.getPage(0))
