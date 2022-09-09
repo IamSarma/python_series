@@ -11,8 +11,17 @@ import PyPDF2
 
 
 # Decrypting PDFs
-pdf_reader = PyPDF2.PdfFileReader(open("encrypted.pdf", "rb"))
-print(pdf_reader.isEncrypted)
+# pdf_reader = PyPDF2.PdfFileReader(open("encrypted.pdf", "rb"))
+# print(pdf_reader.isEncrypted)
+# # print(pdf_reader.getPage(0))
+# pdf_reader.decrypt("rosebud")
 # print(pdf_reader.getPage(0))
-pdf_reader.decrypt("rosebud")
-print(pdf_reader.getPage(0))
+
+
+# Copying pages
+pdf1_file = open("meetingminutes.pdf", "rb")
+pdf2_file = open("meetingminutes2.pdf", "rb")
+
+pdf1_reader = PyPDF2.PdfFileReader(pdf1_file)
+pdf2_reader = PyPDF2.PdfFileReader(pdf2_file)
+pdf_writer = PyPDF2.PdfFileWriter()
