@@ -29,3 +29,7 @@ pdf_writer = PyPDF2.PdfFileWriter()
 for page_num in range(pdf1_reader.numPages):
     page_obj = pdf1_reader.getPage(page_num)
     pdf_writer.addPage(page_obj)
+
+for page_num in range(pdf1_reader.numPages):
+    page_obj = pdf2_reader.getPage(page_num)
+    pdf_writer.addPage(page_obj)
