@@ -78,3 +78,9 @@ import PyPDF2
 
 
 # Encrypting PDFs
+pdf_file = open("meetingminutes.pdf", "rb")
+pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+pdf_writer = PyPDF2.PdfFileWriter()
+
+for page_num in range(pdf_reader.numPages):
+    pdf_writer.addPage(pdf_reader.getPage(page_num))
