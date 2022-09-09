@@ -33,3 +33,9 @@ for page_num in range(pdf1_reader.numPages):
 for page_num in range(pdf1_reader.numPages):
     page_obj = pdf2_reader.getPage(page_num)
     pdf_writer.addPage(page_obj)
+
+pdf_output_file = open("combinedminutes.pdf", "wb")
+pdf_writer.write(pdf_output_file)
+pdf_output_file.close()
+pdf1_file.close()
+pdf2_file.close()
