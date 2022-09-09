@@ -86,3 +86,8 @@ for page_num in range(pdf_reader.numPages):
     pdf_writer.addPage(pdf_reader.getPage(page_num))
 
 pdf_writer.encrypt("swordfish")
+
+result_pdf = open("encrypted_minutes.pdf", "wb")
+pdf_writer.write(result_pdf)
+result_pdf.close()
+pdf_file.close()
