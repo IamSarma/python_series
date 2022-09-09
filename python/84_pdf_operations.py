@@ -84,3 +84,5 @@ pdf_writer = PyPDF2.PdfFileWriter()
 
 for page_num in range(pdf_reader.numPages):
     pdf_writer.addPage(pdf_reader.getPage(page_num))
+
+pdf_writer.encrypt("swordfish")
