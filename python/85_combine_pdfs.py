@@ -11,3 +11,5 @@ pdf_files = []
 for file_name in os.listdir("."):
     if file_name.endswith(".pdf"):
         pdf_files.append(file_name)
+
+pdf_files.sort(key=str.lower)
