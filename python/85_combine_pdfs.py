@@ -17,3 +17,8 @@ pdf_files.sort(key=str.lower)
 
 # Creating PDF writer object
 pdf_writer = PyPDF2.PdfFileWriter()
+
+# Loop through the PDF file(s)
+for file_name in pdf_files:
+    pdf_file_obj = open(file_name, "rb")
+    pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
