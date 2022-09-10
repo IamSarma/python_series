@@ -12,4 +12,8 @@ for file_name in os.listdir("."):
     if file_name.endswith(".pdf"):
         pdf_files.append(file_name)
 
+# Sorting pdf_files list alphabetically
 pdf_files.sort(key=str.lower)
+
+# Creating PDF writer object
+pdf_writer = PyPDF2.PdfFileWriter()
