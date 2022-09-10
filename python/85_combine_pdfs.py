@@ -26,3 +26,8 @@ for file_name in pdf_files:
     for page_num in range(1, pdf_reader.numPages):
         page_obj = pdf_reader.getPage(page_num)
         pdf_writer.addPage(page_obj)
+
+# Save the resulting PDF to a file
+pdf_output = open("all_minutes.pdf", "wb")
+pdf_writer.write(pdf_output)
+pdf_output.close()
