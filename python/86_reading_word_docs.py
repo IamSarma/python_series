@@ -22,4 +22,10 @@ doc = docx.Document("demo.docx")
 
 
 # Extract and display full text from the given word document
-print(read_docx.getText("demo.docx"))
+# print(read_docx.getText("demo.docx"))
+
+
+# Applying style(s)
+print(doc.paragraphs[0].text)
+print(doc.paragraphs[0].style)
+doc.paragraphs[0].style = "Normal"
