@@ -44,7 +44,7 @@ import read_docx
 
 # Writing word document(s)
 doc = docx.Document()
-doc.add_paragraph("Python is awesome!!!")
+doc.add_paragraph("Python is awesome!!!", "Title")
 doc.save("made_with_python.docx")
 
 para_obj1 = doc.add_paragraph("This is a second paragraph.")
