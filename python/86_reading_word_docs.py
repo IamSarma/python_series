@@ -73,5 +73,6 @@ import read_docx
 
 # Adding picture(s)
 doc = docx.Document()
-doc.add_picture("DP.jpg")
+doc.add_picture("DP.jpg", width=docx.shared.Inches(1),
+                height=docx.shared.Cm(3))
 doc.save("doc_with_pic.docx")
