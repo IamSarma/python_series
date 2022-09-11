@@ -11,3 +11,7 @@ doc = docx.Document()
 doc.add_paragraph(
     "This word document is created and converted to PDF using Python 🐍🤩")
 doc.save(word_file_name)
+
+# Convert word to PDF
+word_format_pdf = 17        # Word's numeric code for PDF
+word_obj = win32com.client.Dispatch("Word.Application")
