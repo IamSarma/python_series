@@ -63,9 +63,15 @@ import read_docx
 # doc.save("headings.docx")
 
 
-# Adding page break
+# # Adding page break
+# doc = docx.Document()
+# doc.add_paragraph("This paragraph is on the first page.")
+# doc.paragraphs[0].runs[0].add_break(docx.enum.text.WD_BREAK.PAGE)
+# doc.add_paragraph("This paragraph is on the second page.")
+# doc.save("two_pages.docx")
+
+
+# Adding picture(s)
 doc = docx.Document()
-doc.add_paragraph("This paragraph is on the first page.")
-doc.paragraphs[0].runs[0].add_break(docx.enum.text.WD_BREAK.PAGE)
-doc.add_paragraph("This paragraph is on the second page.")
-doc.save("two_pages.docx")
+doc.add_picture("DP.jpg")
+doc.save("doc_with_pic.docx")
