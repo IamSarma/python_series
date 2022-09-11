@@ -42,12 +42,22 @@ import read_docx
 # doc.save("restyled.docx")
 
 
-# Writing word document(s)
-doc = docx.Document()
-doc.add_paragraph("Python is awesome!!!", "Title")
-doc.save("made_with_python.docx")
+# # Writing word document(s)
+# doc = docx.Document()
+# doc.add_paragraph("Python is awesome!!!", "Title")
+# doc.save("made_with_python.docx")
 
-para_obj1 = doc.add_paragraph("This is a second paragraph.")
-para_obj2 = doc.add_paragraph("This is yet another paragraph.")
-para_obj1.add_run(" This text is being added to the second paragraph.")
-doc.save("multiple_paragraphs.docx")
+# para_obj1 = doc.add_paragraph("This is a second paragraph.")
+# para_obj2 = doc.add_paragraph("This is yet another paragraph.")
+# para_obj1.add_run(" This text is being added to the second paragraph.")
+# doc.save("multiple_paragraphs.docx")
+
+
+# Adding heading(s)
+doc = docx.Document()
+doc.add_heading("Header 0", 0)
+doc.add_heading("Header 0", 1)
+doc.add_heading("Header 0", 2)
+doc.add_heading("Header 0", 3)
+doc.add_heading("Header 0", 4)
+doc.save("headings.docx")
