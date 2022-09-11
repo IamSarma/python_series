@@ -53,11 +53,19 @@ import read_docx
 # doc.save("multiple_paragraphs.docx")
 
 
-# Adding heading(s)
+# # Adding heading(s)
+# doc = docx.Document()
+# doc.add_heading("Header 0", 0)
+# doc.add_heading("Header 0", 1)
+# doc.add_heading("Header 0", 2)
+# doc.add_heading("Header 0", 3)
+# doc.add_heading("Header 0", 4)
+# doc.save("headings.docx")
+
+
+# Adding page break
 doc = docx.Document()
-doc.add_heading("Header 0", 0)
-doc.add_heading("Header 0", 1)
-doc.add_heading("Header 0", 2)
-doc.add_heading("Header 0", 3)
-doc.add_heading("Header 0", 4)
-doc.save("headings.docx")
+doc.add_paragraph("This paragraph is on the first page.")
+doc.paragraphs[0].runs[0].add_break(docx.enum.text.WD_BREAK.PAGE)
+doc.add_paragraph("This paragraph is on the second page.")
+doc.save("two_pages.docx")
