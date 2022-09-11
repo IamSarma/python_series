@@ -1,7 +1,7 @@
 import docx
 import read_docx
 
-doc = docx.Document("demo.docx")
+# doc = docx.Document("demo.docx")
 
 # # Getting the length of the paragraphs in the document
 # print(len(doc.paragraphs))
@@ -25,18 +25,24 @@ doc = docx.Document("demo.docx")
 # print(read_docx.getText("demo.docx"))
 
 
-# Applying style(s)
-print(doc.paragraphs[0].text)
-print(doc.paragraphs[0].style)
-doc.paragraphs[0].style = "Normal"
+# # Applying style(s)
+# print(doc.paragraphs[0].text)
+# print(doc.paragraphs[0].style)
+# doc.paragraphs[0].style = "Normal"
 
-print(doc.paragraphs[1].text)
-print(doc.paragraphs[1].runs[0].text,
-      doc.paragraphs[1].runs[1].text,
-      doc.paragraphs[1].runs[2].text,
-      doc.paragraphs[1].runs[3].text,
-      doc.paragraphs[1].runs[4].text)
-doc.paragraphs[1].runs[0].QuoteChar = True
-doc.paragraphs[1].runs[2].underline = True
-doc.paragraphs[1].runs[4].underline = True
-doc.save("restyled.docx")
+# print(doc.paragraphs[1].text)
+# print(doc.paragraphs[1].runs[0].text,
+#       doc.paragraphs[1].runs[1].text,
+#       doc.paragraphs[1].runs[2].text,
+#       doc.paragraphs[1].runs[3].text,
+#       doc.paragraphs[1].runs[4].text)
+# doc.paragraphs[1].runs[0].QuoteChar = True
+# doc.paragraphs[1].runs[2].underline = True
+# doc.paragraphs[1].runs[4].underline = True
+# doc.save("restyled.docx")
+
+
+# Writing word document(s)
+doc = docx.Document()
+doc.add_paragraph("Python is awesome!!!")
+doc.save("made_with_python.docx")
