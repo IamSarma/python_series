@@ -36,6 +36,7 @@ print(doc.paragraphs[1].runs[0].text,
       doc.paragraphs[1].runs[2].text,
       doc.paragraphs[1].runs[3].text,
       doc.paragraphs[1].runs[4].text)
-doc.paragraphs[0].style = "QuoteChar"
-doc.paragraphs[2].underline = True
-doc.paragraphs[4].underline = True
+doc.paragraphs[1].runs[0].QuoteChar = True
+doc.paragraphs[1].runs[2].underline = True
+doc.paragraphs[1].runs[4].underline = True
+doc.save("restyled.docx")
