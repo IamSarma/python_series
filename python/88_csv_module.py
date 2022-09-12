@@ -49,3 +49,7 @@ import csv
 output_file = open("created_using_dictwriter.csv", "w", newline="")
 output_dict_writer = csv.DictWriter(output_file, ["Name", "Proficiency", "Rating"])
 output_dict_writer.writeheader()
+output_dict_writer.writerow({"Name": "Python", "Proficiency": "Intermediate", "Rating": 4.5})
+output_dict_writer.writerow({"Name": "HTML&CSS", "Rating": 3.5})
+output_dict_writer.writerow({"Name": "Vue", "Proficiency": "Beginner"})
+output_file.close()
