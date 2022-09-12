@@ -15,7 +15,7 @@ if len(sys.argv) < 2:
 location = " ".join(sys.argv[1:])
 
 # Download the JSON data from OpenWeatherMap.org's API
-weather_url = f"http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&cnt=3&APPID={APPID}"
+weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&APPID={APPID}"
 response = requests.get(weather_url)
 response.raise_for_status()
 
@@ -23,14 +23,6 @@ response.raise_for_status()
 weather_data = json.loads(response.text)
 
 # Print weather data
-w = weather_data["List"]
-print(f"Current weather in {location}")
-print(w[0]["weather"][0]["main"], "-", w[0]["weather"][0]["description"])
-print()
-
-print("Tomorrow:")
-print(w[1]["weather"][0]["main"], "-", w[1]["weather"][0]["description"])
-print()
-
-print("Day after tomorrow:")
-print(w[2]["weather"][0]["main"], "-", w[2]["weather"][0]["description"])
+w = weather_data["weather"]
+print("Weather today:")
+print(w[0]["main"], "-", w[0]["description"])
