@@ -6,3 +6,8 @@ import os
 
 # Create folder to save the header removed CSV file(s)
 os.makedirs("header_removed", exist_ok=True)
+
+# Loop through every file in the current working directory
+for csv_file_name in os.listdir("."):
+    if not csv_file_name.endswith(".csv"):
+        continue
