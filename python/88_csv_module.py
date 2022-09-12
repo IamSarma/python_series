@@ -26,5 +26,9 @@ import csv
 # output_file.close()
 
 # The delimeter and lineterminator
-output_file = open("example.tsv", newline="")
+output_file = open("example.tsv", "w", newline="")
 output_writer = csv.writer(output_file, delimiter="\t", lineterminator="\n\n")
+output_writer.writerow(["Apples", "Oranges", "Grapes"])
+output_writer.writerow(["Python", "JavaScript"])
+output_writer.writerow(["The Atomic Habits", "Greek Mythology"])
+output_file.close()
