@@ -40,7 +40,11 @@ import csv
 #     print(row["Timestamp"], row["Fruit"], row["Quantity"])
 
 # Using DictReader Object with file without header
-example_file = open("example.csv")
-example_dict_reader = csv.DictReader(example_file, ["time", "name", "amount"])
-for row in example_dict_reader:
-    print(row["time"], row["name"], row["amount"])
+# example_file = open("example.csv")
+# example_dict_reader = csv.DictReader(example_file, ["time", "name", "amount"])
+# for row in example_dict_reader:
+#     print(row["time"], row["name"], row["amount"])
+
+# Using DictWriter Object to create CSV file(s)
+output_file = open("created_using_dictwriter.csv", "w", newline="")
+output_dict_writer = csv.DictWriter(output_file, ["Name", "Proficiency", "Rating"])
