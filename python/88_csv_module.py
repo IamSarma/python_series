@@ -34,7 +34,13 @@ import csv
 # output_file.close()
 
 # Using DictReader Object with file containing header
-example_file = open("example_with_header.csv")
-example_dict_reader = csv.DictReader(example_file)
+# example_file = open("example_with_header.csv")
+# example_dict_reader = csv.DictReader(example_file)
+# for row in example_dict_reader:
+#     print(row["Timestamp"], row["Fruit"], row["Quantity"])
+
+# Using DictReader Object with file without header
+example_file = open("example.csv")
+example_dict_reader = csv.DictReader(example_file, ["time", "name", "amount"])
 for row in example_dict_reader:
-    print(row["Timestamp"], row["Fruit"], row["Quantity"])
+    print(row["time"], row["name"], row["amount"])
