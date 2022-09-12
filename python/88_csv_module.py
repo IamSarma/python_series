@@ -48,3 +48,4 @@ import csv
 # Using DictWriter Object to create CSV file(s)
 output_file = open("created_using_dictwriter.csv", "w", newline="")
 output_dict_writer = csv.DictWriter(output_file, ["Name", "Proficiency", "Rating"])
+output_dict_writer.writeheader()
