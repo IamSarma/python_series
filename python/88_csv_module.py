@@ -18,9 +18,13 @@ import csv
 #     print(f"Row # {text_file_reader.line_num} {row}")
 
 # Writer object(s)
-output_file = open("output.csv", "w", newline="")
-output_writer = csv.writer(output_file)
-output_writer.writerow(["Python", "Java", "C++", "Ruby"])
-output_writer.writerow(["Hello, World!!!", "Hi Mom", "Python is awesome"])
-output_writer.writerow([1, 3, 5.67, 9])
-output_file.close()
+# output_file = open("output.csv", "w", newline="")
+# output_writer = csv.writer(output_file)
+# output_writer.writerow(["Python", "Java", "C++", "Ruby"])
+# output_writer.writerow(["Hello, World!!!", "Hi Mom", "Python is awesome"])
+# output_writer.writerow([1, 3, 5.67, 9])
+# output_file.close()
+
+# The delimeter and lineterminator
+output_file = open("example.tsv", newline="")
+output_writer = csv.writer(output_file, delimiter="\t", lineterminator="\n\n")
