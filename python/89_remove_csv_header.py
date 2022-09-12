@@ -15,5 +15,14 @@ for csv_file_name in os.listdir("."):
     print(f"Removing header from {csv_file_name} ...")
 
     # Read the CSV file (skipping the first row)
+    csv_rows = []
+    csv_file_obj = open(csv_file_name)
+    csv_reader_obj = csv.reader(csv_file_obj)
+    for row in csv_reader_obj:
+        if csv_reader_obj.line_num == 1:
+            continue
+        csv_rows.append(row)
+        
+    csv_file_obj.close()
 
     # Write out the CSV file
