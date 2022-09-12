@@ -26,9 +26,15 @@ import csv
 # output_file.close()
 
 # The delimeter and lineterminator
-output_file = open("example.tsv", "w", newline="")
-output_writer = csv.writer(output_file, delimiter="\t", lineterminator="\n\n")
-output_writer.writerow(["Apples", "Oranges", "Grapes"])
-output_writer.writerow(["Python", "JavaScript"])
-output_writer.writerow(["The Atomic Habits", "Greek Mythology"])
-output_file.close()
+# output_file = open("example.tsv", "w", newline="")
+# output_writer = csv.writer(output_file, delimiter="\t", lineterminator="\n\n")
+# output_writer.writerow(["Apples", "Oranges", "Grapes"])
+# output_writer.writerow(["Python", "JavaScript"])
+# output_writer.writerow(["The Atomic Habits", "Greek Mythology"])
+# output_file.close()
+
+# Using DictReader Object with file containing header
+example_file = open("example_with_header.csv")
+example_dict_reader = csv.DictReader(example_file)
+for row in example_dict_reader:
+    print(row["Timestamp"], row["Fruit"], row["Quantity"])
