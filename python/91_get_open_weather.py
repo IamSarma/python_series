@@ -18,3 +18,6 @@ location = " ".join(sys.argv[1:])
 weather_url = f"http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&cnt=3&APPID={APPID}"
 response = requests.get(weather_url)
 response.raise_for_status()
+
+# Load JSON data into a Python variable
+weather_data = json.loads(response.text)
