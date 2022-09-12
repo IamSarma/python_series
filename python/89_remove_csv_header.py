@@ -11,3 +11,9 @@ os.makedirs("header_removed", exist_ok=True)
 for csv_file_name in os.listdir("."):
     if not csv_file_name.endswith(".csv"):
         continue
+
+    print(f"Removing header from {csv_file_name} ...")
+
+    # Read the CSV file (skipping the first row)
+
+    # Write out the CSV file
