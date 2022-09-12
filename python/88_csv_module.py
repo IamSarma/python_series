@@ -20,3 +20,7 @@ import csv
 # Writer object(s)
 output_file = open("output.csv", "w", newline="")
 output_writer = csv.writer(output_file)
+output_writer.writerow(["Python", "Java", "C++", "Ruby"])
+output_writer.writerow(["Hello, World!!!", "Hi Mom", "Python is awesome"])
+output_writer.writerow([1, 3, 5.67, 9])
+output_file.close()
