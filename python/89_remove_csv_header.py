@@ -22,7 +22,13 @@ for csv_file_name in os.listdir("."):
         if csv_reader_obj.line_num == 1:
             continue
         csv_rows.append(row)
-        
+
     csv_file_obj.close()
 
     # Write out the CSV file
+    output_file_obj = open(os.path.join("header_removed", csv_file_name), "w", newline="")
+    output_file_writer = csv.writer(output_file_obj)
+    for row in csv_rows:
+        output_file_writer.writerow(row)
+        
+    output_file_obj.close()
