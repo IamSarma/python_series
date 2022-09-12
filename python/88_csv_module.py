@@ -1,8 +1,8 @@
 import csv
 
 # Reader Object(s)
-text_file = open("example.csv")
-text_file_reader = csv.reader(text_file)
+# text_file = open("example.csv")
+# text_file_reader = csv.reader(text_file)
 # text_file_data = list(text_file_reader)
 # print(text_file_data)
 
@@ -14,5 +14,9 @@ text_file_reader = csv.reader(text_file)
 
 # Reading data from reader object(s) in a for loop
 # Looping over the reader object works only once, create reader object again to loop second time 
-for row in text_file_reader:
-    print(f"Row # {text_file_reader.line_num} {row}")
+# for row in text_file_reader:
+#     print(f"Row # {text_file_reader.line_num} {row}")
+
+# Writer object(s)
+output_file = open("output.csv", "w", newline="")
+output_writer = csv.writer(output_file)
