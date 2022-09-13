@@ -26,5 +26,15 @@ import time
 
 
 # Displaying return value of time() in a human-readable format
-current_time = time.time()
-print(time.ctime(current_time))
+# current_time = time.time()
+# print(time.ctime(current_time))
+
+
+# Pause program for a while using sleep() function
+for i in range(3):
+    print("Python")
+    time.sleep(1)
+    print("is")
+    time.sleep(1)
+    print("awesome!!!")
+    time.sleep(1)
