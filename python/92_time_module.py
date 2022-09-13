@@ -31,10 +31,17 @@ import time
 
 
 # Pause program for a while using sleep() function
-for i in range(3):
-    print("Python")
-    time.sleep(1)
-    print("is")
-    time.sleep(1)
-    print("awesome!!!")
-    time.sleep(1)
+# for i in range(3):
+#     print("Python")
+#     time.sleep(1)
+#     print("is")
+#     time.sleep(1)
+#     print("awesome!!!")
+#     time.sleep(1)
+
+
+# Rounding time() function return value
+current_time = time.time()
+print(round(current_time, 4))
+print(round(current_time, 2))
+print(round(current_time))
