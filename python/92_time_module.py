@@ -22,4 +22,9 @@ import time
 
 
 # Displaying time using ctime() function
-print(time.ctime())
+# print(time.ctime())
+
+
+# Displaying return value of time() in a human-readable format
+current_time = time.time()
+print(time.ctime(current_time))
