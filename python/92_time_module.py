@@ -8,6 +8,14 @@ print(time.time())
 # Function that calculate the product of the first 100_000 numbers
 def calcProd():
     prod_value = 1
-    for i in range(1, 100_00):
+    for i in range(1, 1200):
         prod_value *= i
     return prod_value
+
+# Calculating the execution time
+start_time = time.time()
+result = calcProd()
+end_time = time.time()
+
+print(f"The result is {len(str(result))} characters long")
+print(f"Took {end_time - start_time} seconds to calculate")
