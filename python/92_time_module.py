@@ -12,7 +12,7 @@ import time
 #         prod_value *= i
 #     return prod_value
 
-# # Calculating the execution time
+# Calculating the execution time
 # start_time = time.time()
 # result = calcProd()
 # end_time = time.time()
