@@ -29,7 +29,14 @@ import time
 
 
 # The timedelta date type
-delta = datetime.timedelta(days=11, hours=10, minutes=9, seconds=8)
-print(delta.days, delta.seconds, delta.microseconds)
-print(delta.total_seconds())
-print(str(delta))
+# delta = datetime.timedelta(days=11, hours=10, minutes=9, seconds=8)
+# print(delta.days, delta.seconds, delta.microseconds)
+# print(delta.total_seconds())
+# print(str(delta))
+
+
+# Performing arithmetic operation(s) on datetime values
+# Addition
+dt = datetime.datetime.now()
+thousand_days = datetime.timedelta(days=1000)
+print(dt + thousand_days)
