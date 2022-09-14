@@ -40,3 +40,7 @@ import time
 dt = datetime.datetime.now()
 thousand_days = datetime.timedelta(days=1000)
 print(dt + thousand_days)
+# Subtraction
+sep_14 = datetime.datetime(2022, 9, 14, 0, 0, 0)
+thirty_years = datetime.timedelta(days=365 * 30)      # Approximate value
+print(sep_14 - thirty_years)
