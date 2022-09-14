@@ -6,3 +6,8 @@ paint_process = subprocess.Popen("C:\Program Files\WindowsApps\Microsoft.Paint_1
 
 # Checking if the Paint application is still open using poll() method
 print(paint_process.poll() == None)
+
+
+# Block until the Paint application is closed/quit
+paint_process.wait()
+print(paint_process.poll() != None)
