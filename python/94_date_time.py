@@ -49,9 +49,16 @@ import time
 
 
 # Pause program until a specific time
-current_time = datetime.datetime.now()
-plus_ten_seconds = current_time + datetime.timedelta(seconds=10)
-while current_time < plus_ten_seconds:
-    time.sleep(1)
-    current_time = datetime.datetime.now()
-print("Done")
+# current_time = datetime.datetime.now()
+# plus_ten_seconds = current_time + datetime.timedelta(seconds=10)
+# while current_time < plus_ten_seconds:
+#     time.sleep(1)
+#     current_time = datetime.datetime.now()
+# print("Done")
+
+
+# Converting datetime object(s) into string(s)
+current_date = datetime.datetime.now()
+print(current_date.strftime("%Y/%m/%d %H:%M:%S"))
+print(current_date.strftime("%I:%M %p"))
+print(current_date.strftime("%B of %y"))
