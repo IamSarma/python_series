@@ -49,4 +49,9 @@ for i in range(0, 140 ,10):    # Loops 14 times, creates 14 threads
     download_threads.append(download_thread)
     download_thread.start()
 
+
 # Wait for all threads to end
+for download_thread in download_threads:
+    download_thread.join()
+
+print("Done")
