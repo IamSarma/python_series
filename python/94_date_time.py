@@ -58,7 +58,14 @@ import time
 
 
 # Converting datetime object(s) into string(s)
-current_date = datetime.datetime.now()
-print(current_date.strftime("%Y/%m/%d %H:%M:%S"))
-print(current_date.strftime("%I:%M %p"))
-print(current_date.strftime("%B of %y"))
+# current_date = datetime.datetime.now()
+# print(current_date.strftime("%Y/%m/%d %H:%M:%S"))
+# print(current_date.strftime("%I:%M %p"))
+# print(current_date.strftime("%B of '%y"))
+
+
+# Converting string(s) into datetime object(s)
+print(datetime.datetime.strptime("September 14, 2022", "%B %d, %Y"))
+print(datetime.datetime.strptime("2022/09/14 9:59:00","%Y/%m/%d %H:%M:%S"))
+print(datetime.datetime.strptime("September of '21", "%B of '%y"))
+print(datetime.datetime.strptime("February of '87", "%B of '%y"))
