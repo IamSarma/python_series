@@ -44,3 +44,5 @@ print(dt + thousand_days)
 sep_14 = datetime.datetime(2022, 9, 14, 0, 0, 0)
 thirty_years = datetime.timedelta(days=365 * 30)      # Approximate value
 print(sep_14 - thirty_years)
+# Multiplication
+print(sep_14 - 2 * thirty_years)
