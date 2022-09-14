@@ -36,13 +36,22 @@ import time
 
 
 # Performing arithmetic operation(s) on datetime values
-# Addition
-dt = datetime.datetime.now()
-thousand_days = datetime.timedelta(days=1000)
-print(dt + thousand_days)
-# Subtraction
-sep_14 = datetime.datetime(2022, 9, 14, 0, 0, 0)
-thirty_years = datetime.timedelta(days=365 * 30)      # Approximate value
-print(sep_14 - thirty_years)
-# Multiplication
-print(sep_14 - 2 * thirty_years)
+# # Addition
+# dt = datetime.datetime.now()
+# thousand_days = datetime.timedelta(days=1000)
+# print(dt + thousand_days)
+# # Subtraction
+# sep_14 = datetime.datetime(2022, 9, 14, 0, 0, 0)
+# thirty_years = datetime.timedelta(days=365 * 30)      # Approximate value
+# print(sep_14 - thirty_years)
+# # Multiplication
+# print(sep_14 - 2 * thirty_years)
+
+
+# Pause program until a specific time
+current_time = datetime.datetime.now()
+plus_ten_seconds = current_time + datetime.timedelta(seconds=10)
+while current_time < plus_ten_seconds:
+    time.sleep(1)
+    current_time = datetime.datetime.now()
+print("Done")
