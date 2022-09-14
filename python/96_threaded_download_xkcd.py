@@ -41,7 +41,7 @@ def downloadXkcd(start_comic, end_comic):
 
 # Create and start the thread object(s)
 download_threads = []          # A list of all the thread object(s)
-for i in range(0, 140 ,10):    # Loops 14 times, creates 14 threads
+for i in range(0, 100 ,10):    # Loops 14 times, creates 14 threads
     start = i
     end = i + 9
     if start == 0: start = 1   # There is no comic 0, so set it to 1
