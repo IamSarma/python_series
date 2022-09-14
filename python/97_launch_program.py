@@ -15,5 +15,9 @@ import subprocess
 
 
 # Passing argument(s) to Popen() method
-subprocess.Popen([r"C:\Windows\System32\notepad.exe",
-                 r"D:\Projects\python_series\open_with_Popen.txt"])
+# subprocess.Popen([r"C:\Windows\System32\notepad.exe",
+#                  r"D:\Projects\python_series\open_with_Popen.txt"])
+
+
+# Opening file(s) with default application(s)
+subprocess.Popen(["start", "open_me.txt"], shell=True)
