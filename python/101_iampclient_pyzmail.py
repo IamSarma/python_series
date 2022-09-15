@@ -38,7 +38,7 @@ raw_messages = imap_obj.fetch(UIDs, ["BODY[]"])
 
 
 # Getting email addresses from a raw message
-raw_message = pyzmail.PyzMessage.factory(raw_messages[3][b"BODY[]"])
+# raw_message = pyzmail.PyzMessage.factory(raw_messages[3][b"BODY[]"])
 # print(raw_message.get_subject())
 # print(raw_message.get_addresses("from"))
 # print(raw_message.get_addresses("to"))
@@ -47,7 +47,12 @@ raw_message = pyzmail.PyzMessage.factory(raw_messages[3][b"BODY[]"])
 
 
 # Getting the body from a raw message
-print(raw_message.text_part != None)
-print(raw_message.text_part.get_payload().decode(raw_message.text_part.charset))
-print(raw_message.html_part != None)
-print(raw_message.html_part.get_payload().decode(raw_message.text_part.charset))
+# print(raw_message.text_part != None)
+# print(raw_message.text_part.get_payload().decode(raw_message.text_part.charset))
+# print(raw_message.html_part != None)
+# print(raw_message.html_part.get_payload().decode(raw_message.text_part.charset))
+
+
+# Deleting email(s)
+imap_obj.delete_messages(UIDs)
+# imap_obj.expunge()      # delete_message() usually permanently delete(s) the mail(s)
