@@ -19,6 +19,7 @@ user_email = input("Enter the full mail address: ")
 user_pwd = input("Enter the password to login: ")
 # print(imap_obj.login(user_email, user_pwd))
 imap_obj.login(user_email, user_pwd)
+print("Logged in to IMAP server")
 
 
 # Searching for Email
@@ -56,3 +57,8 @@ raw_messages = imap_obj.fetch(UIDs, ["BODY[]"])
 # Deleting email(s)
 imap_obj.delete_messages(UIDs)
 # imap_obj.expunge()      # delete_message() usually permanently delete(s) the mail(s)
+
+
+# Disconnecting from the IMAP server
+imap_obj.logout()
+print("Logged out from IMAP server")
