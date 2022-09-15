@@ -1,5 +1,6 @@
 import imapclient
 import pprint
+import datetime
 
 
 # Connecting to an IMAP server
@@ -16,4 +17,9 @@ imap_obj.login(user_email, user_pwd)
 
 # Searching for Email
 # Selecting a folder
-pprint.pprint(imap_obj.list_folders())
+# pprint.pprint(imap_obj.list_folders())
+imap_obj.select_folder("INBOX", readonly=True)
+
+# Getting UIDs
+UIDs = imap_obj.search(["SINCE", datetime.date(2022, 9, 15)])
+print(UIDs)
