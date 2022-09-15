@@ -11,5 +11,10 @@ import ezgmail
 
 
 # Sending mail with attachment(s)
-ezgmail.send("<recipient>@gmail.com", "Test Mail",
-             "This mail is sent using Python!!!", ["open_me.txt", "beep.mp3"])
+# ezgmail.send("<recipient>@gmail.com", "Test Mail",
+#              "This mail is sent using Python!!!", ["open_me.txt", "beep.mp3"])
+
+
+# Reading mail from a gmail account
+unread_threads = ezgmail.unread()
+print(ezgmail.summary(unread_threads))
