@@ -19,3 +19,4 @@ import ezgmail
 unread_threads = ezgmail.unread()
 print(ezgmail.summary(unread_threads))
 print(len(unread_threads))
+print(unread_threads[0])
