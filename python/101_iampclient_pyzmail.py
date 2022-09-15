@@ -23,8 +23,14 @@ imap_obj.login(user_email, user_pwd)
 # Searching for Email
 # Selecting a folder
 # pprint.pprint(imap_obj.list_folders())
-imap_obj.select_folder("INBOX", readonly=True)
+# imap_obj.select_folder("INBOX", readonly=True)
+imap_obj.select_folder("INBOX", readonly=False)
 
 # Getting UIDs
 UIDs = imap_obj.search(["SINCE", datetime.date(2022, 9, 15)])
 print(UIDs)
+
+
+# Fetching an email and marking it as read
+raw_messages = imap_obj.fetch(UIDs, ["BODY[]"])
+pprint.pprint(raw_messages)
