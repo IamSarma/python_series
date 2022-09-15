@@ -18,3 +18,4 @@ import ezgmail
 # Reading mail from a gmail account
 unread_threads = ezgmail.unread()
 print(ezgmail.summary(unread_threads))
+print(len(unread_threads))
