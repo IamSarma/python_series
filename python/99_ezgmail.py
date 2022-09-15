@@ -30,5 +30,10 @@ import ezgmail
 
 
 # Return the 25 most recent threads in your gmail account
-recent_threads = ezgmail.recent()
+# recent_threads = ezgmail.recent()
+# print(len(recent_threads))
+
+
+# Return customized number of recent threads in your gmail account
+recent_threads = ezgmail.recent(maxResults=100)
 print(len(recent_threads))
