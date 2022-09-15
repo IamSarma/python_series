@@ -2,6 +2,7 @@ import imapclient
 import imaplib
 import pprint
 import datetime
+import pyzmail
 
 
 # Increasing the size limit
@@ -33,4 +34,8 @@ print(UIDs)
 
 # Fetching an email and marking it as read
 raw_messages = imap_obj.fetch(UIDs, ["BODY[]"])
-pprint.pprint(raw_messages)
+# pprint.pprint(raw_messages)
+
+
+# Getting email addresses from a raw message
+raw_message = pyzmail.PyzMessage.factory(raw_messages[3][b"BODY[]"])
