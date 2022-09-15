@@ -29,7 +29,7 @@ imap_obj.select_folder("INBOX", readonly=False)
 
 # Getting UIDs
 UIDs = imap_obj.search(["SINCE", datetime.date(2022, 9, 15)])
-print(UIDs)
+# print(UIDs)
 
 
 # Fetching an email and marking it as read
@@ -39,3 +39,8 @@ raw_messages = imap_obj.fetch(UIDs, ["BODY[]"])
 
 # Getting email addresses from a raw message
 raw_message = pyzmail.PyzMessage.factory(raw_messages[3][b"BODY[]"])
+print(raw_message.get_subject())
+print(raw_message.get_addresses("from"))
+print(raw_message.get_addresses("to"))
+print(raw_message.get_addresses("cc"))
+print(raw_message.get_addresses("bcc"))
