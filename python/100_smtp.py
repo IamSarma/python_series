@@ -27,8 +27,13 @@ smtp_obj.login(user_email, user_password)
 
 
 # Sending an email
-to_address = input("Enter TO mail address: ")
-mail_subject = input("Enter mail subject: ")
-mail_body = input("Enter mail body: ")
-smtp_obj.sendmail(user_email, to_address,
-                  f"Subject: {mail_subject}\n{mail_body}")
+# to_address = input("Enter TO mail address: ")
+# mail_subject = input("Enter mail subject: ")
+# mail_body = input("Enter mail body: ")
+# smtp_obj.sendmail(user_email, to_address,
+#                   f"Subject: {mail_subject}\n{mail_body}")
+
+
+# Disconnecting from SMTP server
+# Return value 221 means session is ending
+print(smtp_obj.quit())
