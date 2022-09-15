@@ -39,8 +39,15 @@ raw_messages = imap_obj.fetch(UIDs, ["BODY[]"])
 
 # Getting email addresses from a raw message
 raw_message = pyzmail.PyzMessage.factory(raw_messages[3][b"BODY[]"])
-print(raw_message.get_subject())
-print(raw_message.get_addresses("from"))
-print(raw_message.get_addresses("to"))
-print(raw_message.get_addresses("cc"))
-print(raw_message.get_addresses("bcc"))
+# print(raw_message.get_subject())
+# print(raw_message.get_addresses("from"))
+# print(raw_message.get_addresses("to"))
+# print(raw_message.get_addresses("cc"))
+# print(raw_message.get_addresses("bcc"))
+
+
+# Getting the body from a raw message
+print(raw_message.text_part != None)
+print(raw_message.text_part.get_payload().decode(raw_message.text_part.charset))
+print(raw_message.html_part != None)
+print(raw_message.html_part.get_payload().decode(raw_message.text_part.charset))
