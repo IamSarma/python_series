@@ -16,14 +16,19 @@ import ezgmail
 
 
 # Reading mail from a gmail account
-unread_threads = ezgmail.unread()
-print(ezgmail.summary(unread_threads))
-print(len(unread_threads))
-print(unread_threads[0])
-print(len(unread_threads[0].messages))
-print(unread_threads[0].messages[0])
-print(unread_threads[0].messages[0].subject)
-print(unread_threads[0].messages[0].body)
-print(unread_threads[0].messages[0].timestamp)
-print(unread_threads[0].messages[0].sender)
-print(unread_threads[0].messages[0].recipient)
+# unread_threads = ezgmail.unread()
+# print(ezgmail.summary(unread_threads))
+# print(len(unread_threads))
+# print(unread_threads[0])
+# print(len(unread_threads[0].messages))
+# print(unread_threads[0].messages[0])
+# print(unread_threads[0].messages[0].subject)
+# print(unread_threads[0].messages[0].body)
+# print(unread_threads[0].messages[0].timestamp)
+# print(unread_threads[0].messages[0].sender)
+# print(unread_threads[0].messages[0].recipient)
+
+
+# Return the 25 most recent threads in your gmail account
+recent_threads = ezgmail.recent()
+print(len(recent_threads))
