@@ -1,6 +1,11 @@
 import imapclient
+import imaplib
 import pprint
 import datetime
+
+
+# Increasing the size limit
+imaplib._MAXLINE = 10_000_000
 
 
 # Connecting to an IMAP server
