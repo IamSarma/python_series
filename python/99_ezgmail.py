@@ -1,0 +1,3 @@
+import ezgmail
+
+ezgmail.init()
