@@ -40,6 +40,13 @@ import ezgmail
 
 
 # Searching mail from a gmail account
-result_threads = ezgmail.search("Mail")
-print(len(result_threads))
-print(ezgmail.summary(result_threads))
+# result_threads = ezgmail.search("Mail")
+# print(len(result_threads))
+# print(ezgmail.summary(result_threads))
+
+
+# Downloading attachment(s) from a gmail account
+att_threads = ezgmail.search("attachment")
+print(att_threads[0].messages[0].attachments)
+att_threads[0].messages[0].downloadAttachment("beep.mp3")
+att_threads[0].messages[0].downloadAllAttachments(downloadFolder="sound")
