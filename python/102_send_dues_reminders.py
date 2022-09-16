@@ -17,3 +17,7 @@ latest_month = sheet.cell(row=1, column=last_col).value
 unpaid_members = {}
 for r in range(2, sheet.max_row + 1):
     payment_status = sheet.cell(row=r, column=last_col).value
+    if payment_status.lower() != "paid":
+        name = sheet.cell(row=r, column=1)
+        email_address = sheet.cell(row=r, column=2)
+        unpaid_members["name"] = email_address
