@@ -26,5 +26,10 @@ from PIL import ImageColor, Image
 
 
 # Creating new image
-image_1 = Image.new("RGBA", (100, 200), "purple")
-image_1.save("purple_image.png")
+# image_1 = Image.new("RGBA", (100, 200), "purple")
+# image_1.save("purple_image.png")
+
+
+# Creating new transparent image
+image_2 = Image.new("RGBA", (20, 20))
+image_2.save("transparent_image.png")
