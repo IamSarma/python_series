@@ -21,3 +21,12 @@ for r in range(2, sheet.max_row + 1):
         name = sheet.cell(row=r, column=1)
         email_address = sheet.cell(row=r, column=2)
         unpaid_members["name"] = email_address
+
+
+# Login to email account
+user_email = sys.argv[1]
+user_pwd = sys.argv[2]
+smtp_obj = smtplib.SMTP("smtp.gmail.com", 587)
+smtp_obj.ehlo()
+smtp_obj.starttls()
+smtp_obj.login(user_email, user_pwd)
