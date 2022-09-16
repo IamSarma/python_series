@@ -17,3 +17,9 @@ print(self_img.size)
 print(self_img.filename)
 print(self_img.format)
 print(self_img.format_description)
+
+
+# Save the image
+# Conversion only required while saving RGBA file to jpg format
+self_img = self_img.convert("RGB")
+self_img.save("dp.jpg")
