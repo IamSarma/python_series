@@ -30,3 +30,10 @@ smtp_obj = smtplib.SMTP("smtp.gmail.com", 587)
 smtp_obj.ehlo()
 smtp_obj.starttls()
 smtp_obj.login(user_email, user_pwd)
+
+
+# Send out reminder mail(s)
+for name, email in unpaid_members.items():
+    mail_subject = f"Subject: {latest_month} dues unpaid\n"
+    mail_content = f"Dear {name},\nRecords show that you have not paid dues for {latest_month}, Please make this payment as soon as possible. Thank you!"
+    mail_body = f"{mail_subject}"
