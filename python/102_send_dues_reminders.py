@@ -11,3 +11,9 @@ wb = openpyxl.load_workbook("dues_records.xlsx")
 sheet = wb["Sheet1"]
 last_col = sheet.max_column
 latest_month = sheet.cell(row=1, column=last_col).value
+
+
+# Check each member's payment status
+unpaid_members = {}
+for r in range(2, sheet.max_row + 1):
+    payment_status = sheet.cell(row=r, column=last_col).value
