@@ -10,3 +10,7 @@ from PIL import ImageColor, Image
 
 # Creating image object
 self_img = Image.open("dp.png")
+
+
+# Working with image data type
+print(self_img.size)
