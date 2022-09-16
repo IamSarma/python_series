@@ -15,3 +15,4 @@ self_img = Image.open("dp.png")
 # Working with image data type
 print(self_img.size)
 print(self_img.filename)
+print(self_img.format)
