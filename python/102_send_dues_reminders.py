@@ -17,10 +17,10 @@ latest_month = sheet.cell(row=1, column=last_col).value
 unpaid_members = {}
 for r in range(2, sheet.max_row + 1):
     payment_status = sheet.cell(row=r, column=last_col).value
-    if payment_status.lower() != "paid":
-        name = sheet.cell(row=r, column=1)
-        email_address = sheet.cell(row=r, column=2)
-        unpaid_members["name"] = email_address
+    if payment_status != "paid":
+        name = sheet.cell(row=r, column=1).value
+        email_address = sheet.cell(row=r, column=2).value
+        unpaid_members[name] = email_address
 
 
 # Login to email account
@@ -36,4 +36,12 @@ smtp_obj.login(user_email, user_pwd)
 for name, email in unpaid_members.items():
     mail_subject = f"Subject: {latest_month} dues unpaid\n"
     mail_content = f"Dear {name},\nRecords show that you have not paid dues for {latest_month}, Please make this payment as soon as possible. Thank you!"
-    mail_body = f"{mail_subject}"
+    mail_body = f"{mail_subject}{mail_content}"
+    # Send mail and check send status
+    print(f"Sending email to {email}")
+    send_mail_status = smtp_obj.sendmail(user_email, email, mail_body)
+    if send_mail_status != {}:
+        print(f"Unable to send email to {email}: {send_mail_status}")
+
+# Logout/Quit from SMTP
+smtp_obj.quit()
