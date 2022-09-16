@@ -25,3 +25,11 @@ print(user_message.body)
 print(user_message.status)
 print(user_message.date_created)
 print(user_message.date_sent)
+
+
+# Refetching message details to get the date sent status
+print("\n\n")
+updated_message = twilio_cli.messages.get(user_message.sid)
+print(updated_message.status)
+print(updated_message.date_created)
+print(updated_message.date_sent)
