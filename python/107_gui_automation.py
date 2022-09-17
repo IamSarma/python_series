@@ -96,4 +96,13 @@ import pyautogui
 # Other way(s) of obtaining windows
 # print(pyautogui.getAllWindows())
 # print(pyautogui.getWindowsAt(100, 100))
-print(pyautogui.getWindowsWithTitle("Paint"))
+# print(pyautogui.getWindowsWithTitle("Paint"))
+
+
+# Manipulating windows
+time.sleep(2)
+active_window = pyautogui.getActiveWindow()
+print(active_window.width)
+print(active_window.topleft)
+active_window.width = 1000
+active_window.topleft = (120, 75)
