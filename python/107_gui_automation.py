@@ -38,4 +38,9 @@ import pyautogui
 # pyautogui.click(500, 500)
 # pyautogui.rightClick(1000, 500)
 # pyautogui.middleClick(800, 500)
-pyautogui.doubleClick(600, 500)
+# pyautogui.doubleClick(600, 500)
+
+
+# Scrolling the mouse
+pyautogui.scroll(200)
+pyautogui.scroll(-200)
