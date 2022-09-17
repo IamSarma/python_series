@@ -120,3 +120,6 @@ if not paint_window.isMinimized:
 # Check the minimized window and restore
 if paint_window.isMinimized:
     paint_window.restore()
+# Closing the window
+time.sleep(2)
+paint_window.close()
