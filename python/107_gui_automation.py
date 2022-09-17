@@ -73,4 +73,8 @@ try:
     screen_position = pyautogui.locateOnScreen("windows_update.png")
 except:
     print("Image not found")
-print(screen_position)
+# print(screen_position)
+
+
+# Perform mouse click based on the image recognition
+pyautogui.click(screen_position)
