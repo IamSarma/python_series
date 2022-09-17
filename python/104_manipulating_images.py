@@ -42,7 +42,7 @@ cat_image = Image.open("zophie.png")
 
 
 # Copying and pasting image(s) onto other image(s)
-cat_face_image = Image.open("cropped.png")
+# cat_face_image = Image.open("cropped.png")
 # cat_copy_image = cat_image.copy()
 # cat_copy_image.paste(cat_face_image, (0, 0))
 # cat_copy_image.paste(cat_face_image, (400, 500))
@@ -50,12 +50,18 @@ cat_face_image = Image.open("cropped.png")
 
 
 # Creating tiled image(s)
-cat_copy_image2 = cat_image.copy()
-cat_image_width, cat_image_height = cat_image.size
-cat_face_image_width, cat_face_image_height = cat_face_image.size
+# cat_copy_image2 = cat_image.copy()
+# cat_image_width, cat_image_height = cat_image.size
+# cat_face_image_width, cat_face_image_height = cat_face_image.size
 
-for left in range(0, cat_image_width, cat_face_image_width):
-    for top in range(0, cat_image_height, cat_face_image_height):
-        cat_copy_image2.paste(cat_face_image, (left, top))
+# for left in range(0, cat_image_width, cat_face_image_width):
+#     for top in range(0, cat_image_height, cat_face_image_height):
+#         cat_copy_image2.paste(cat_face_image, (left, top))
 
-cat_copy_image2.save("tiled.png")
+# cat_copy_image2.save("tiled.png")
+
+
+# Resizing an image
+img_width, img_height = cat_image.size
+quarter_sized_img = cat_image.resize((int(img_width/2), int(img_height/2)))
+quarter_sized_img.save("quarter_sized.png")
