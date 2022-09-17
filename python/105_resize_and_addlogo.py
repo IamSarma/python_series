@@ -40,3 +40,6 @@ for file_name in os.listdir("."):
         print(f"Adding logo to {file_name}")
         target_img.paste(logo_image, (target_img_width -
                          logo_image_width, target_img_height - logo_image_height))
+
+        # Save changes
+        target_img.save(os.path.join(file_name, "with_logo"))
