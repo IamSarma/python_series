@@ -53,3 +53,9 @@ cat_face_image = Image.open("cropped.png")
 cat_copy_image2 = cat_image.copy()
 cat_image_width, cat_image_height = cat_image.size
 cat_face_image_width, cat_face_image_height = cat_face_image.size
+
+for left in range(0, cat_image_width, cat_face_image_width):
+    for top in range(0, cat_image_height, cat_face_image_height):
+        cat_copy_image2.paste(cat_face_image, (left, top))
+
+cat_copy_image2.save("tiled.png")
