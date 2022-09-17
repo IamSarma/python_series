@@ -26,3 +26,7 @@ import pyautogui
 
 # Getting the mouse cursor's current position
 print(pyautogui.position())
+mouse_position = pyautogui.position()
+print(f"Mouse cursor's current position is: {mouse_position}")
+print(f"Getting cursor's x-axis position using index 0: {mouse_position[0]}")
+print(f"Getting cursor's y-axis position using index 1: {mouse_position[1]}")
