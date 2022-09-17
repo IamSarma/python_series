@@ -17,8 +17,12 @@ import pyautogui
 
 
 # Moving the mouse in square pattern from mouse's current position
-for i in range(5):
-    pyautogui.move(100, 0, duration=0.25)
-    pyautogui.move(0, 100, duration=0.25)
-    pyautogui.move(-100, 0, duration=0.25)
-    pyautogui.move(0, -100, duration=0.25)
+# for i in range(5):
+#     pyautogui.move(100, 0, duration=0.25)
+#     pyautogui.move(0, 100, duration=0.25)
+#     pyautogui.move(-100, 0, duration=0.25)
+#     pyautogui.move(0, -100, duration=0.25)
+
+
+# Getting the mouse cursor's current position
+print(pyautogui.position())
