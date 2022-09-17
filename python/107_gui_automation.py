@@ -42,5 +42,9 @@ import pyautogui
 
 
 # Scrolling the mouse
-pyautogui.scroll(200)
-pyautogui.scroll(-200)
+# pyautogui.scroll(200)
+# pyautogui.scroll(-200)
+
+
+# Get mouse movement's x and y co-ordinates (use in interactive shell preferably)
+pyautogui.mouseInfo()
