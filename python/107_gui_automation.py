@@ -137,6 +137,13 @@ time.sleep(1)
 # pyautogui.write(["a", "b", "left", "left", "X", "Y"], interval=0.05)
 
 # Pressing and releasing the keyboard
-pyautogui.keyDown("shift")
-pyautogui.press("4")
-pyautogui.keyUp("shift")
+# pyautogui.keyDown("shift")
+# pyautogui.press("4")
+# pyautogui.keyUp("shift")
+
+# Hotkey combination(s)
+# Pressing ctrl+V (copy some text before) - normal and difficult way
+pyautogui.keyDown("ctrl")
+pyautogui.keyDown("v")
+pyautogui.keyUp("v")
+pyautogui.keyUp("ctrl")
