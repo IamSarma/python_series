@@ -85,6 +85,16 @@ cat_image = Image.open("zophie.png")
 
 # Changing individual pixel(s)
 blank_img = Image.new("RGBA", (100, 100))
+
+# Filling top half pixels with light gray
 for x in range(100):
     for y in range(50):
         blank_img.putpixel((x, y), (210, 210, 210))
+
+
+# Filling bottom half pixels with dark gray
+for x in range(100):
+    for y in range(50, 100):
+        blank_img.putpixel((x, y), ImageColor.getcolor("darkgray", "RGBA"))
+
+blank_img.save("put_pixel.png")
