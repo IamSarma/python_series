@@ -26,5 +26,10 @@ draw_obj.polygon(((57, 85), (79, 62), (94, 85),
                  (120, 90), (103, 113)), fill="brown")
 
 
+# Drawing a pattern of green lines using loop
+for i in range(100, 200, 10):
+    draw_obj.line([(i, 0), (200, i - 100)], fill="green")
+
+
 # Save the resulting image
 new_image.save("drawing_img.png")
