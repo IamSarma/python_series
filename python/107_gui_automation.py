@@ -85,3 +85,5 @@ import pyautogui
 time.sleep(3)
 active_window = pyautogui.getActiveWindow()
 print(active_window)
+print(active_window.title)
+print(active_window.size)
