@@ -95,4 +95,5 @@ import pyautogui
 
 # Other way(s) of obtaining windows
 # print(pyautogui.getAllWindows())
-print(pyautogui.getWindowsAt(100, 100))
+# print(pyautogui.getWindowsAt(100, 100))
+print(pyautogui.getWindowsWithTitle("Paint"))
