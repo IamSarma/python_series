@@ -94,4 +94,5 @@ import pyautogui
 # pyautogui.click(active_window.left + 100, active_window.top + 50)
 
 # Other way(s) of obtaining windows
-print(pyautogui.getAllWindows())
+# print(pyautogui.getAllWindows())
+print(pyautogui.getWindowsAt(100, 100))
