@@ -43,7 +43,13 @@ cat_image = Image.open("zophie.png")
 
 # Copying and pasting image(s) onto other image(s)
 cat_face_image = Image.open("cropped.png")
-cat_copy_image = cat_image.copy()
-cat_copy_image.paste(cat_face_image, (0, 0))
-cat_copy_image.paste(cat_face_image, (400, 500))
-cat_copy_image.save("pasted.png")
+# cat_copy_image = cat_image.copy()
+# cat_copy_image.paste(cat_face_image, (0, 0))
+# cat_copy_image.paste(cat_face_image, (400, 500))
+# cat_copy_image.save("pasted.png")
+
+
+# Creating tiled image(s)
+cat_copy_image2 = cat_image.copy()
+cat_image_width, cat_image_height = cat_image.size
+cat_face_image_width, cat_face_image_height = cat_face_image.size
