@@ -31,3 +31,6 @@ for file_name in os.listdir("."):
             target_img_width = int(
                 (SQUARE_FIT_SIZE / target_img_height) * target_img_width)
             target_img_height = SQUARE_FIT_SIZE
+        # Resize the image
+        print(f"Resizing {file_name}")
+        target_img = target_img.resize((target_img_width, target_img_height))
