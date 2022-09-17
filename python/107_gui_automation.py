@@ -87,3 +87,5 @@ active_window = pyautogui.getActiveWindow()
 print(active_window)
 print(active_window.title)
 print(active_window.size)
+print(active_window.left, active_window.top,
+      active_window.right, active_window.bottom)
