@@ -131,4 +131,7 @@ import subprocess
 subprocess.Popen("notepad.exe")
 time.sleep(1)
 # pyautogui.write("Python is awesome!!!")
-pyautogui.write("Python is awesome!!!", interval=0.05)
+# pyautogui.write("Python is awesome!!!", interval=0.05)
+
+# Passing keyboard key string(s)
+pyautogui.write(["a", "b", "left", "left", "X", "Y"], interval=0.05)
