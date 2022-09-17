@@ -21,5 +21,10 @@ draw_obj.rectangle((20, 30, 60, 60), fill="blue")
 draw_obj.ellipse((120, 30, 160, 60), fill="red")
 
 
+# Draw a brown polygon
+draw_obj.polygon(((57, 85), (79, 62), (94, 85),
+                 (120, 90), (103, 113)), fill="brown")
+
+
 # Save the resulting image
 new_image.save("drawing_img.png")
