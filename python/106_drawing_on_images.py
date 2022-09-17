@@ -35,9 +35,9 @@ draw_obj.text((20, 150), "Hello", fill="purple")
 
 # Applying font(s) to the text
 fonts_folder = "C:\\Windows\\Fonts"
-dank_mono_font = ImageFont.truetype(
+arial_font = ImageFont.truetype(
     os.path.join(fonts_folder, "Arial.ttf"), 30)
-draw_obj.text((100, 150), "Python", fill="gray", font=dank_mono_font)
+draw_obj.text((100, 150), "Python", fill="gray", font=arial_font)
 
 # Save the resulting image
 new_image.save("text_on_image.png")
