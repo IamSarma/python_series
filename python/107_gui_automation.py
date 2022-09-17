@@ -134,4 +134,9 @@ time.sleep(1)
 # pyautogui.write("Python is awesome!!!", interval=0.05)
 
 # Passing keyboard key string(s)
-pyautogui.write(["a", "b", "left", "left", "X", "Y"], interval=0.05)
+# pyautogui.write(["a", "b", "left", "left", "X", "Y"], interval=0.05)
+
+# Pressing and releasing the keyboard
+pyautogui.keyDown("shift")
+pyautogui.press("4")
+pyautogui.keyUp("shift")
