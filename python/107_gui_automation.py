@@ -148,4 +148,8 @@ time.sleep(1)
 # pyautogui.keyUp("v")
 # pyautogui.keyUp("ctrl")
 # Pressing ctrl+v using hotkey combination
-pyautogui.hotkey("ctrl", "v")
+# pyautogui.hotkey("ctrl", "v")
+
+
+# Using sleep and countdown
+pyautogui.sleep(3)
