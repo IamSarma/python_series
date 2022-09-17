@@ -73,5 +73,11 @@ cat_image = Image.open("zophie.png")
 cat_image.rotate(90).save("rotated_90.png")
 cat_image.rotate(180).save("rotated_180.png")
 cat_image.rotate(270).save("rotated_270.png")
+# Rotating image with using optional argument expand
 cat_image.rotate(6).save("rotated_6.png")
 cat_image.rotate(6, expand=True).save("rotated_6_expanded.png")
+# Flipping image
+cat_image.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT).save(
+    "horizontal_flip.png")
+cat_image.transpose(method=Image.Transpose.FLIP_TOP_BOTTOM).save(
+    "vertical_flip.png")
