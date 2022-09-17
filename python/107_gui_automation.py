@@ -58,5 +58,10 @@ import pyautogui
 
 
 # Getting pixel's RGBA info at given x and y co-ordiantes
-time.sleep(3)
+# time.sleep(3)
 print(pyautogui.pixel(1872, 13))
+
+
+# Matching pixel's RGBA with color
+print(pyautogui.pixelMatchesColor(1872, 13, (100, 255, 0)))
+print(pyautogui.pixelMatchesColor(1872, 13, (35, 38, 46)))
