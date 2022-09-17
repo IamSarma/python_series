@@ -142,8 +142,10 @@ time.sleep(1)
 # pyautogui.keyUp("shift")
 
 # Hotkey combination(s)
-# Pressing ctrl+V (copy some text before) - normal and difficult way
-pyautogui.keyDown("ctrl")
-pyautogui.keyDown("v")
-pyautogui.keyUp("v")
-pyautogui.keyUp("ctrl")
+# Pressing ctrl+v (copy some text before) - normal and difficult way
+# pyautogui.keyDown("ctrl")
+# pyautogui.keyDown("v")
+# pyautogui.keyUp("v")
+# pyautogui.keyUp("ctrl")
+# Pressing ctrl+v using hotkey combination
+pyautogui.hotkey("ctrl", "v")
