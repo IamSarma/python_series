@@ -1,5 +1,6 @@
 import time
 import pyautogui
+import subprocess
 
 
 # Obtaining the screen resolution
@@ -109,17 +110,24 @@ import pyautogui
 
 
 # More ways of manipulating windows
-time.sleep(2)
-paint_window = pyautogui.getWindowsWithTitle("Paint")[0]
-# Check and maximize the window
-if not paint_window.isMaximized:
-    paint_window.maximize()
-# Check and minimize the window
-if not paint_window.isMinimized:
-    paint_window.minimize()
-# Check the minimized window and restore
-if paint_window.isMinimized:
-    paint_window.restore()
-# Closing the window
-time.sleep(2)
-paint_window.close()
+# time.sleep(2)
+# paint_window = pyautogui.getWindowsWithTitle("Paint")[0]
+# # Check and maximize the window
+# if not paint_window.isMaximized:
+#     paint_window.maximize()
+# # Check and minimize the window
+# if not paint_window.isMinimized:
+#     paint_window.minimize()
+# # Check the minimized window and restore
+# if paint_window.isMinimized:
+#     paint_window.restore()
+# # Closing the window
+# time.sleep(2)
+# paint_window.close()
+
+
+# Controlling the keyboard
+# Sending a string from the keyboard
+subprocess.Popen("notepad.exe")
+time.sleep(1)
+pyautogui.write("Python is awesome!!!")
