@@ -100,9 +100,17 @@ import pyautogui
 
 
 # Manipulating windows
+# time.sleep(2)
+# active_window = pyautogui.getActiveWindow()
+# print(active_window.width)
+# print(active_window.topleft)
+# active_window.width = 1000
+# active_window.topleft = (120, 75)
+
+
+# More ways of manipulating windows
 time.sleep(2)
-active_window = pyautogui.getActiveWindow()
-print(active_window.width)
-print(active_window.topleft)
-active_window.width = 1000
-active_window.topleft = (120, 75)
+paint_window = pyautogui.getWindowsWithTitle("Paint")[0]
+# Check and maximize the window
+if not paint_window.isMaximized:
+    paint_window.maximize()
