@@ -31,5 +31,11 @@ from PIL import ImageColor, Image
 
 
 # Creating new transparent image
-image_2 = Image.new("RGBA", (20, 20))
-image_2.save("transparent_image.png")
+# image_2 = Image.new("RGBA", (20, 20))
+# image_2.save("transparent_image.png")
+
+
+# Cropping image(s)
+cat_image = Image.open("zophie.png")
+cropped_image = cat_image.crop((335, 345, 565, 560))
+cropped_image.save("cropped.png")
