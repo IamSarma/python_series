@@ -91,3 +91,4 @@ print(active_window.left, active_window.top,
       active_window.right, active_window.bottom)
 print(active_window.topleft)
 print(active_window.area)
+pyautogui.click(active_window.left + 100, active_window.top + 50)
