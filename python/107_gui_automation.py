@@ -114,3 +114,6 @@ paint_window = pyautogui.getWindowsWithTitle("Paint")[0]
 # Check and maximize the window
 if not paint_window.isMaximized:
     paint_window.maximize()
+# Check and minimize the window
+if not paint_window.isMinimized:
+    paint_window.minimize()
