@@ -17,5 +17,9 @@ draw_obj.line([(0, 0), (199, 0), (199, 199), (0, 199), (0, 0)], fill="black")
 draw_obj.rectangle((20, 30, 60, 60), fill="blue")
 
 
+# Draw a red ellipse
+draw_obj.ellipse((120, 30, 160, 60), fill="red")
+
+
 # Save the resulting image
 new_image.save("drawing_img.png")
