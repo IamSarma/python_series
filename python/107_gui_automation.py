@@ -153,4 +153,5 @@ import subprocess
 
 # Using sleep and countdown
 pyautogui.sleep(3)
+print(f"Script execution starts in: ", end="")
 pyautogui.countdown(5)
