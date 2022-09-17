@@ -117,3 +117,6 @@ if not paint_window.isMaximized:
 # Check and minimize the window
 if not paint_window.isMinimized:
     paint_window.minimize()
+# Check the minimized window and restore
+if paint_window.isMinimized:
+    paint_window.restore()
