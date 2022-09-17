@@ -19,3 +19,7 @@ for file_name in os.listdir("."):
         continue
     target_img = Image.open(file_name)
     target_img_width, target_img_height = target_img.size
+
+    # Check if image needs to be resized
+    if target_img_width > SQUARE_FIT_SIZE and target_img_height > SQUARE_FIT_SIZE:
+        pass
