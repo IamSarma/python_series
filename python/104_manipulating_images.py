@@ -37,5 +37,13 @@ from PIL import ImageColor, Image
 
 # Cropping image(s)
 cat_image = Image.open("zophie.png")
-cropped_image = cat_image.crop((335, 345, 565, 560))
-cropped_image.save("cropped.png")
+# cropped_image = cat_image.crop((335, 345, 565, 560))
+# cropped_image.save("cropped.png")
+
+
+# Copying and pasting image(s) onto other image(s)
+cat_face_image = Image.open("cropped.png")
+cat_copy_image = cat_image.copy()
+cat_copy_image.paste(cat_face_image, (0, 0))
+cat_copy_image.paste(cat_face_image, (400, 500))
+cat_copy_image.save("pasted.png")
