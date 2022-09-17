@@ -36,3 +36,4 @@ import pyautogui
 
 # Clicking the mouse
 pyautogui.click(500, 500)
+pyautogui.rightClick(1000, 500)
