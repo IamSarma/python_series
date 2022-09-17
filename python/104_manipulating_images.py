@@ -62,8 +62,14 @@ cat_image = Image.open("zophie.png")
 
 
 # Resizing an image
-img_width, img_height = cat_image.size
-quarter_sized_img = cat_image.resize((int(img_width / 2), int(img_height / 2)))
-quarter_sized_img.save("quarter_sized.png")
-slender_sized_img = cat_image.resize((img_width, img_height + 300))
-slender_sized_img.save("slender_sized.png")
+# img_width, img_height = cat_image.size
+# quarter_sized_img = cat_image.resize((int(img_width / 2), int(img_height / 2)))
+# quarter_sized_img.save("quarter_sized.png")
+# slender_sized_img = cat_image.resize((img_width, img_height + 300))
+# slender_sized_img.save("slender_sized.png")
+
+
+# Rotating and Flipping image(s)
+cat_image.rotate(90).save("rotated_90.png")
+cat_image.rotate(180).save("rotated_180.png")
+cat_image.rotate(270).save("rotated_270.png")
