@@ -11,3 +11,11 @@ SQUARE_FIT_SIZE = 300
 LOGO_FILENAME = "catlogo.png"
 logo_image = Image.open(LOGO_FILENAME)
 logg_width, logo_height = logo_image.size
+
+
+# Loop over all the file(s) in the working directory
+for file_name in os.listdir("."):
+    if not (file_name.endswith(".png") or file_name.endswith(".jpg")) or file_name == LOGO_FILENAME:
+        continue
+    target_img = Image.open(file_name)
+    target_img_width, target_img_height = target_img.size
