@@ -22,4 +22,12 @@ for file_name in os.listdir("."):
 
     # Check if image needs to be resized
     if target_img_width > SQUARE_FIT_SIZE and target_img_height > SQUARE_FIT_SIZE:
-        pass
+        # Calculate the new height and width to resize to
+        if target_img_width > target_img_height:
+            target_img_height = int(
+                (SQUARE_FIT_SIZE / target_img_width) * target_img_height)
+            target_img_width = SQUARE_FIT_SIZE
+        else:
+            target_img_width = int(
+                (SQUARE_FIT_SIZE / target_img_height) * target_img_width)
+            target_img_height = SQUARE_FIT_SIZE
