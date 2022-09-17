@@ -128,8 +128,8 @@ import subprocess
 
 # Controlling the keyboard
 # Sending a string from the keyboard
-subprocess.Popen("notepad.exe")
-time.sleep(1)
+# subprocess.Popen("notepad.exe")
+# time.sleep(1)
 # pyautogui.write("Python is awesome!!!")
 # pyautogui.write("Python is awesome!!!", interval=0.05)
 
@@ -153,3 +153,4 @@ time.sleep(1)
 
 # Using sleep and countdown
 pyautogui.sleep(3)
+pyautogui.countdown(5)
