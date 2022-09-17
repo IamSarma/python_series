@@ -52,6 +52,11 @@ import pyautogui
 
 
 # Take screenshot
+# time.sleep(3)
+# screen_shot = pyautogui.screenshot()
+# screen_shot.save("paint_screenshot.png")
+
+
+# Getting pixel's RGBA info at given x and y co-ordiantes
 time.sleep(3)
-screen_shot = pyautogui.screenshot()
-screen_shot.save("paint_screenshot.png")
+print(pyautogui.pixel(1872, 13))
