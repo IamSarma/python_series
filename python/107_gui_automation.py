@@ -1,3 +1,4 @@
+import time
 import pyautogui
 
 
@@ -47,4 +48,10 @@ import pyautogui
 
 
 # Get mouse movement's x and y co-ordinates (use in interactive shell preferably)
-pyautogui.mouseInfo()
+# pyautogui.mouseInfo()
+
+
+# Take screenshot
+time.sleep(3)
+screen_shot = pyautogui.screenshot()
+screen_shot.save("paint_screenshot.png")
