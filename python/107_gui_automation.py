@@ -68,13 +68,20 @@ import pyautogui
 
 
 # Image Recognition
-time.sleep(3)
-try:
-    screen_position = pyautogui.locateOnScreen("windows_update.png")
-except:
-    print("Image not found")
+# time.sleep(3)
+# try:
+#     screen_position = pyautogui.locateOnScreen("windows_update.png")
+# except:
+#     print("Image not found")
 # print(screen_position)
 
 
 # Perform mouse click based on the image recognition
-pyautogui.click(screen_position)
+# pyautogui.click(screen_position)
+
+
+# Windows
+# Obtaining the active window
+time.sleep(3)
+active_window = pyautogui.getActiveWindow()
+print(active_window)
