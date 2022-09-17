@@ -130,4 +130,5 @@ import subprocess
 # Sending a string from the keyboard
 subprocess.Popen("notepad.exe")
 time.sleep(1)
-pyautogui.write("Python is awesome!!!")
+# pyautogui.write("Python is awesome!!!")
+pyautogui.write("Python is awesome!!!", interval=0.05)
