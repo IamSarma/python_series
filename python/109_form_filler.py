@@ -6,11 +6,11 @@ import time
 
 # Static form data
 form_data = [
-    {'name': 'Alice',
-     'fear': 'eavesdroppers',
-     'source': 'wand',
-     'robocop': 4,
-     'comments': 'Tell Bob I said hi.'},
+    # {'name': 'Alice',
+    #  'fear': 'eavesdroppers',
+    #  'source': 'wand',
+    #  'robocop': 4,
+    #  'comments': 'Tell Bob I said hi.'},
     # {'name': 'Bob',
     #  'fear': 'bees',
     #  'source': 'amulet',
@@ -21,11 +21,11 @@ form_data = [
     #  'source': 'crystal ball',
     #  'robocop': 1,
     #  'comments': 'Please take the puppets out of thebreak room.'},
-    # {'name': 'Alex Murphy',
-    #  'fear': 'ED-209',
-    #  'source': 'money',
-    #  'robocop': 5,
-    #  'comments': 'Protect the innocent. Serve the public trust. Uphold the law.'},
+    {'name': 'Alex Murphy',
+     'fear': 'ED-209',
+     'source': 'money',
+     'robocop': 5,
+     'comments': 'Protect the innocent. Serve the public trust. Uphold the law.'},
 ]
 
 # Adding global pause and displaying instruction to the user
@@ -54,7 +54,7 @@ for person in form_data:
         pyautogui.write(["down", "down", "space", "\t"], interval=0.5)
     elif person['source'] == "crystal ball":
         pyautogui.write(["down", "down", "down", "space", "\t"], interval=0.5)
-    elif person['source'] == "monet":
+    elif person['source'] == "money":
         pyautogui.write(["down", "down", "down", "down",
                         "space", "\t"], interval=0.5)
 
@@ -67,6 +67,9 @@ for person in form_data:
         pyautogui.write(["right", "right", "\t", "\t"], interval=0.5)
     elif person['robocop'] == 4:
         pyautogui.write(["right", "right", "right", "\t", "\t"], interval=0.5)
+    elif person['robocop'] == 5:
+        pyautogui.write(["right", "right", "right",
+                        "right", "\t", "\t"], interval=0.5)
 
     # Fill out the Additional Comments field
     pyautogui.write(person['comments'] + "\t")
