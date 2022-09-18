@@ -76,5 +76,7 @@ for person in form_data:
     pyautogui.press("enter")
 
     # Wait until form page has loaded
+    print(f"Form submitted for {person['name']}")
+    time.sleep(5)
 
     # Click the Submit another response link
