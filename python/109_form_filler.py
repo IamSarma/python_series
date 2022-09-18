@@ -4,6 +4,30 @@ import pyautogui
 import time
 
 
+# Static form data
+formData = [
+    {'name': 'Alice',
+     'fear': 'eavesdroppers',
+     'source': 'wand',
+     'robocop': 4, 'comments':
+     'Tell Bob I said hi.'},
+    {'name': 'Bob',
+     'fear': 'bees',
+     'source': 'amulet',
+     'robocop': 4,
+     'comments': 'n/a'},
+    {'name': 'Carol',
+     'fear': 'puppets',
+     'source': 'crystal ball',
+     'robocop': 1,
+     'comments': 'Please take the puppets out of thebreak room.'},
+    {'name': 'Alex Murphy',
+     'fear': 'ED-209',
+     'source': 'money',
+     'robocop': 5,
+     'comments': 'Protect the innocent. Serve the public trust. Uphold the law.'},
+]
+
 # Give the user a chance to kill the script
 
 # Wait until the form page has loaded
