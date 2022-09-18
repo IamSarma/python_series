@@ -5,7 +5,7 @@ import time
 
 
 # Static form data
-formData = [
+form_data = [
     {'name': 'Alice',
      'fear': 'eavesdroppers',
      'source': 'wand',
@@ -27,6 +27,10 @@ formData = [
      'robocop': 5,
      'comments': 'Protect the innocent. Serve the public trust. Uphold the law.'},
 ]
+
+# Adding global pause and displaying instruction to the user
+pyautogui.PAUSE = 0.5
+print("Ensure that the browser window is active and the form is loaded!")
 
 # Give the user a chance to kill the script
 
