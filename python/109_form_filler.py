@@ -48,6 +48,15 @@ for person in form_data:
     pyautogui.write(person['fear'] + "\t")
 
     # Fill out the Source of Wizard Powers field
+    if person['source'] == "wand":
+        pyautogui.write(["down", "space", "\t"], interval=0.5)
+    elif person['source'] == "amulet":
+        pyautogui.write(["down", "down", "space", "\t"], interval=0.5)
+    elif person['source'] == "crystal ball":
+        pyautogui.write(["down", "down", "down", "space", "\t"], interval=0.5)
+    elif person['source'] == "monet":
+        pyautogui.write(["down", "down", "down", "down",
+                        "space", "\t"], interval=0.5)
 
     # Fill out the Robocop field
 
