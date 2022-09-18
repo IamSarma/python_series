@@ -9,8 +9,8 @@ form_data = [
     {'name': 'Alice',
      'fear': 'eavesdroppers',
      'source': 'wand',
-     'robocop': 4, 'comments':
-     'Tell Bob I said hi.'},
+     'robocop': 4,
+     'comments': 'Tell Bob I said hi.'},
     # {'name': 'Bob',
     #  'fear': 'bees',
     #  'source': 'amulet',
@@ -38,7 +38,7 @@ for person in form_data:
     print(">>> 5 SECOND PAUSE TO LET USER PRESS CTRL+C <<<")
     time.sleep(5)
 
-    print(f"Filling form for {person['name']}")
+    print(f"Filling form data for {person['name']}")
     pyautogui.write(["\t", "\t", "\t", "\t"])
 
     # Fill out the Name field
@@ -59,6 +59,14 @@ for person in form_data:
                         "space", "\t"], interval=0.5)
 
     # Fill out the Robocop field
+    if person['robocop'] == 1:
+        pyautogui.write([" ", "\t", "\t"], interval=0.5)
+    elif person['robocop'] == 2:
+        pyautogui.write(["right", "\t", "\t"], interval=0.5)
+    elif person['robocop'] == 3:
+        pyautogui.write(["right", "right", "\t", "\t"], interval=0.5)
+    elif person['robocop'] == 4:
+        pyautogui.write(["right", "right", "right", "\t", "\t"], interval=0.5)
 
     # Fill out the Additional Comments field
 
