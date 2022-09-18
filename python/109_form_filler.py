@@ -33,6 +33,9 @@ pyautogui.PAUSE = 0.5
 print("Ensure that the browser window is active and the form is loaded!")
 
 # Give the user a chance to kill the script
+for person in form_data:
+    print(">>> 5 SECOND PAUSE TO LET USER PRESS CTRL+C <<<")
+    time.sleep(5)
 
 # Wait until the form page has loaded
 
