@@ -41,18 +41,19 @@ for person in form_data:
     print(f"Entering {person['name']}")
     pyautogui.write(["\t", "\t", "\t", "\t"])
 
-# Fill out the Name field
+    # Fill out the Name field
+    pyautogui.write(person['name'] + "\t")
 
-# Fill out the Greatest Fear(s) field
+    # Fill out the Greatest Fear(s) field
 
-# Fill out the Source of Wizard Powers field
+    # Fill out the Source of Wizard Powers field
 
-# Fill out the Robocop field
+    # Fill out the Robocop field
 
-# Fill out the Additional Comments field
+    # Fill out the Additional Comments field
 
-# Click Sumbit
+    # Click Sumbit
 
-# Wait until form page has loaded
+    # Wait until form page has loaded
 
-# Click the Submit another response link
+    # Click the Submit another response link
