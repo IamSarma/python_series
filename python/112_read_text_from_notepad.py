@@ -27,3 +27,8 @@ pyautogui.hotkey("ctrl", "c")
 # Print the copied content from notepad
 notepad_content = pyperclip.paste()
 print(notepad_content)
+
+# Close notepad without saving changes
+notepad_window.close()
+time.sleep(0.5)
+pyautogui.hotkey("alt", "n")
