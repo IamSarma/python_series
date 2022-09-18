@@ -38,13 +38,14 @@ for person in form_data:
     print(">>> 5 SECOND PAUSE TO LET USER PRESS CTRL+C <<<")
     time.sleep(5)
 
-    print(f"Entering {person['name']}")
+    print(f"Filling form for {person['name']}")
     pyautogui.write(["\t", "\t", "\t", "\t"])
 
     # Fill out the Name field
     pyautogui.write(person['name'] + "\t")
 
     # Fill out the Greatest Fear(s) field
+    pyautogui.write(person['fear'] + "\t")
 
     # Fill out the Source of Wizard Powers field
 
