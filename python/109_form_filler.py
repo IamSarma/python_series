@@ -72,6 +72,8 @@ for person in form_data:
     pyautogui.write(person['comments'] + "\t")
 
     # Click Sumbit
+    time.sleep(0.5)
+    pyautogui.press("enter")
 
     # Wait until form page has loaded
 
