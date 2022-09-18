@@ -69,6 +69,7 @@ for person in form_data:
         pyautogui.write(["right", "right", "right", "\t", "\t"], interval=0.5)
 
     # Fill out the Additional Comments field
+    pyautogui.write(person['comments'] + "\t")
 
     # Click Sumbit
 
